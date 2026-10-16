@@ -999,3 +999,39 @@ footer {
     }
 
 }
+
+/* Apps: screenshot slideshows */
+#apps{padding:50px 15px;border-bottom:1px solid #dcd9d9;text-align:center}
+#apps h2{color:#374054;margin-bottom:50px}
+.app{display:flex;align-items:center;max-width:1000px;margin:0 auto 30px auto;background:#fff;border-radius:4px;overflow:hidden;text-align:left}
+.app .carousel{flex:0 0 60%}
+.app-info{flex:1;padding:25px}
+.app-info h3{font-size:1.5em;font-weight:300;color:#374054;margin:0 0 15px 0}
+.app-info p{color:#74808a;margin:0 0 15px 0;font-size:0.9em}
+.app-tags{margin:0 0 15px 0;padding:0}
+.app-tags li{display:inline-block;list-style:none;margin:0 5px 5px 0;padding:2px 8px;font-size:0.8em;color:#374054;background:#e4e4ea;border-radius:3px}
+.carousel{position:relative}
+.carousel-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track:focus-visible{outline:3px solid #3498db;outline-offset:-3px}
+.carousel figure{flex:0 0 100%;margin:0;scroll-snap-align:start;position:relative}
+.carousel img{display:block;width:100%;aspect-ratio:16/10;height:auto;object-fit:cover;object-position:top;background:#e4e4ea}
+/* Phone shots are portrait; show them whole instead of cropping */
+.carousel img.tall{object-fit:contain;background:#e4e4ea}
+.carousel figcaption{padding:12px 15px 0 15px;font-size:0.85em;color:#74808a;text-align:center}
+/* Offset by the caption and dots below the image so the arrows centre on the screenshot */
+.carousel-prev,.carousel-next{position:absolute;top:calc(50% - 30px);transform:translateY(-50%);width:36px;height:36px;border:none;border-radius:50%;background:rgba(255,255,255,0.9);color:#3498db;box-shadow:0 1px 3px rgba(0,0,0,0.24);cursor:pointer;opacity:0;transition:.3s ease all}
+.carousel-prev{left:10px}
+.carousel-next{right:10px}
+.carousel:hover .carousel-prev,.carousel:hover .carousel-next,.carousel-prev:focus-visible,.carousel-next:focus-visible{opacity:1}
+.carousel-dots{padding:8px 0 12px 0;text-align:center}
+.carousel-dots button{width:8px;height:8px;margin:0 3px;padding:0;border:none;border-radius:50%;background:#dcd9d9;cursor:pointer}
+.carousel-dots button[aria-current=true]{background:#3498db}
+.carousel.single .carousel-prev,.carousel.single .carousel-next{display:none}
+.carousel .placeholder > div{aspect-ratio:16/10;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#74808a;border:2px dashed #b9bfc4;margin:15px}
+.carousel .placeholder i{font-size:3em;margin-bottom:10px}
+@media only screen and (max-width: 768px){
+    .app{display:block}
+    /* No hover on touch screens, so keep the arrows visible */
+    .carousel-prev,.carousel-next{opacity:1}
+}
