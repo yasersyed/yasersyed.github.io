@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Syed Yaser Ahmed | Tech Lead</title>
-    <meta name="description" content="Syed Yaser Ahmed - Tech Lead and Certified Kubernetes Application Developer specializing in Java Spring Boot, Kubernetes, AWS and distributed systems.">
+    <title>Syed Yaser Ahmed | Lead Backend Engineer</title>
+    <meta name="description" content="Syed Yaser Ahmed - Lead backend engineer building secure, high-availability Java systems with Spring Boot, AWS and Kubernetes.">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Yaser Syed</h1>
-            <h2>Tech Lead | Certified Kubernetes Application Developer</h2>
+            <h2>Lead Backend Engineer | Acting Development Manager</h2>
             <a href="./Resume.pdf" class="btn-rounded-white" target="_blank" rel="noopener">Download Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -69,15 +69,20 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Tech Lead and Certified Kubernetes Application Developer with 10+ years of experience developing and delivering mission-critical,
-                        enterprise-grade backend systems. I combine deep technical expertise in Java Spring Boot, Kubernetes, AWS, and distributed systems
-                        architecture with proven leadership in team mentorship, architectural governance, and high-availability solution delivery.
+                        Lead backend engineer with 10+ years building secure, high-availability Java systems with Spring Boot, RESTful microservices,
+                        and relational data models on AWS and Kubernetes. Hands-on with identity and access controls, including OAuth2/OIDC, JWT,
+                        role-based access control, and AWS IAM.
+                    </p>
+                    <p>
+                        I currently lead a team of 3 engineers on a 24/7 data platform serving 8 North American electricity markets while writing
+                        production code daily, and build Claude Code skills that automate development workflows, with every AI-generated change
+                        validated through peer review and automated testing.
                     </p>
                     <ul>
-                        <li><strong>Backend Architecture &amp; Development:</strong> Java Spring Boot, Microservices Design, Distributed Systems, Event Storming, DDD</li>
-                        <li><strong>Cloud &amp; DevOps:</strong> AWS, Kubernetes, Docker, CI/CD, Infrastructure as Code</li>
-                        <li><strong>Data &amp; Databases:</strong> PostgreSQL, Spark, Trino, Iceberg, JPA/ORM</li>
-                        <li><strong>Leadership:</strong> Technical Leadership, Mentoring, Agile (Scrum, Kanban), Architecture Design</li>
+                        <li><strong>Architecture:</strong> Event-Driven Architecture, Domain-Driven Design, System Design</li>
+                        <li><strong>Security &amp; Identity:</strong> OAuth2/OIDC, JWT, role-based access control, AWS IAM, secrets management</li>
+                        <li><strong>Cloud &amp; Containers:</strong> AWS (S3, EC2, EKS, IAM), Kubernetes, Docker, Argo CD (GitOps), Azure</li>
+                        <li><strong>Certification:</strong> Certified Kubernetes Application Developer (CKAD)</li>
                     </ul>
                 </div>
             </div>
@@ -90,62 +95,56 @@
         <div id="experience-timeline">
             <div data-date="Dec 2019 – Present">
                 <h3>PCI Energy Solutions</h3>
-                <h4>Tech Lead</h4>
-                <p>
-                    Lead design and development of an advanced analytics platform serving electricity providers across all US markets,
-                    processing millions of daily queries and petabyte-scale grid data.
-                </p>
+                <h4>Acting Development Manager (Oct 2025 – Present)</h4>
                 <ul>
-                    <li>Architected scalable backend systems using Java Spring Boot, PostgreSQL, and optimized data access patterns (JPA, EBean, jOOQ) supporting millions of daily utility operator queries.</li>
-                    <li>Integrated Apache Spark, Trino, and Iceberg to process petabyte-scale analytical workloads, enabling real-time grid analytics.</li>
-                    <li>Mentored junior developers, interviewed candidates for team expansion, and led technical design reviews ensuring architectural alignment and code quality.</li>
+                    <li>Lead 3 engineers on a Java/Spring Boot ingestion platform that integrates 8 North American electricity markets (MISO, SPP, CAISO, ERCOT, PJM, NYISO, ISO-NE, AESO), running 24/7 against a 30–60 minute publication-to-query SLA across AWS and on-prem clusters.</li>
+                    <li>Redesigned the ingestion framework so new market integrations use one shared pattern, replacing hundreds of bespoke per-report, per-table repository integrations.</li>
+                    <li>Own the roadmap for moving market integrations off legacy relational databases onto Spark, Trino, and Apache Iceberg; delivered AESO natively on the new stack, migrated ERCOT with zero downstream downtime, and now lead the MISO migration.</li>
+                    <li>Secured credentials and API keys for all 8 market integrations and scoped each service's AWS access through IAM roles and least-privilege policies on EKS.</li>
+                    <li>Built custom Claude Code skills that automate adding new market downloaders, migrating integrations to the lakehouse stack, and generating documentation; every AI-generated change passes code review and automated testing before merge.</li>
+                    <li>Mentor 3 engineers through design and code review, and hold design and code-review authority for teams outside the platform group.</li>
+                </ul>
+                <br />
+                <h4>Senior Software Developer (Jan 2023 – Oct 2025)</h4>
+                <ul>
+                    <li>Led the migration from PostgreSQL to an Apache Iceberg lakehouse with Spark ingestion and Trino query, removing the relational analytics bottleneck and enabling petabyte-scale analysis.</li>
+                    <li>Designed a common data model that normalizes per-market schemas for offers, prices, market results, dispatch instructions, and credit reports, turning each new market into an integration instead of a rewrite.</li>
+                    <li>Built Java 21 / Spring Boot REST ingestion services deployed to AWS (S3, EKS) and on-prem Kubernetes through Argo CD GitOps, using Redis, RabbitMQ, and Grafana for observability.</li>
+                    <li>Built the Java backend and Node.js/Express API for a real-time profit-and-loss analyzer for ERCOT market data; took over the React frontend and shipped features solo, then trained a support team and handed off the product.</li>
+                    <li>Migrated the MISO analytics backend from a Redis task-runner architecture to Iceberg, Spark, and Trino, simplifying schema evolution and cutting new-feature development time.</li>
+                    <li>Tuned data access with jOOQ and Spring Data JPA across PostgreSQL and Oracle, cloud and on-prem.</li>
+                </ul>
+                <br />
+                <h4>Software Developer (Dec 2019 – Jan 2023)</h4>
+                <ul>
+                    <li>Joined the founding team of PCI's MISO market analytics product, building scheduled ETL pipelines across SQL Server, Oracle, and PostgreSQL, then rebuilding the backend around a Redis-driven scheduler that spawns container-based executors on Kubernetes.</li>
+                    <li>Implemented OAuth2/OIDC authentication with JWT and role-based access control for Spring Boot microservices.</li>
+                    <li>Built Spring Boot microservices on Kubernetes, with performance tuning and automated testing in JUnit and Mockito.</li>
                 </ul>
             </div>
 
-            <div data-date="Jun 2018 – Dec 2019">
+            <div data-date="2018 – 2019">
                 <h3>Cognizant Technologies</h3>
                 <h4>Software Engineer</h4>
-                <p>
-                    Developed critical components of a HIPAA-compliant insurance claims clearing house platform, processing healthcare claims
-                    between providers and payers on RHEL and Azure.
-                </p>
                 <ul>
-                    <li>Implemented secure solutions for claims data processing, ensuring strict HIPAA compliance and healthcare industry standards.</li>
-                    <li>Enhanced system resiliency with automated remediation, maintaining 99.9%+ uptime for thousands of providers and payers; reduced operational overhead by 40%.</li>
+                    <li>Built HIPAA-compliant claims-processing components in Core Java on Azure (Red Hat VMs), sustaining 99.9%+ uptime for thousands of healthcare providers.</li>
+                    <li>Cut operational overhead 40% through automation and workflow optimization.</li>
                 </ul>
             </div>
 
-            <div data-date="Dec 2017 – May 2018">
+            <div data-date="2017 – 2018">
                 <h3>Eaton's Crouse-Hinds</h3>
-                <h4>Software Developer Intern</h4>
-                <p>
-                    Tested, debugged, and optimized embedded firmware and dashboard software for hazardous location lighting systems;
-                    reduced testing time 400% through an automated test suite.
-                </p>
+                <h4>Software Developer Co-op</h4>
                 <ul>
-                    <li>Resolved critical firmware and dashboard issues, enabling reliable remote commissioning under extreme environmental conditions.</li>
+                    <li>Optimized C firmware and ASP.NET dashboards for hazard-rated industrial lighting, and implemented WirelessHART commissioning protocols.</li>
                 </ul>
             </div>
 
-            <div data-date="Dec 2016 – Feb 2017">
-                <h3>AptaMatrix, Inc.</h3>
-                <h4>Software Developer Intern</h4>
-                <p>
-                    Processed proprietary binary data from Illumina HiSeq 2500 sequencers using Perl and C, enabling DNA-protein interaction
-                    analysis from FastQ and cluster intensity files.
-                </p>
-            </div>
-
-            <div data-date="Nov 2013 – Jun 2016">
+            <div data-date="2013 – 2016">
                 <h3>Wipro Technologies</h3>
                 <h4>Project Engineer</h4>
-                <p>
-                    Developed and maintained dashboard applications for Nestlé using Perl CGI and Shell scripting; streamlined data extraction
-                    and reporting processes.
-                </p>
                 <ul>
-                    <li>Interviewed, trained, and mentored new Perl developers, coordinating weekly progress meetings with clients.</li>
-                    <li>Supported Avaya customer onboarding and incident management, automating service request workflows with BMC Remedy and HP NNMi; reduced task execution times by 90%, earning the 'Category Creator – Automation' award.</li>
+                    <li>Built dashboard and workflow-automation tooling (Perl, shell, BMC Remedy, HP NNMi), cutting onboarding time 90%.</li>
                 </ul>
             </div>
 
@@ -157,17 +156,15 @@
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>Syracuse University</h3>
-            <span class="education-date"> May 2018</span>
+            <span class="education-date">2018</span>
             <h4>Master of Science in Computer Engineering</h4>
-            <p>GPA 3.60/4.0</p>
         </div>
         <!-- End .education-block -->
 
         <div class="education-block">
             <h3>Anna University</h3>
-            <span class="education-date"> May 2013</span>
+            <span class="education-date">2013</span>
             <h4>Bachelor of Technology in Information Technology</h4>
-            <p>GPA 7.65/10</p>
         </div>
         <!-- End .education-block -->
     </div>
@@ -266,25 +263,36 @@
         <ul>
             <li>Java</li>
             <li>Spring Boot</li>
-            <li>Kubernetes</li>
-            <li>AWS</li>
-            <li>Docker</li>
+            <li>Spring Data JPA</li>
+            <li>jOOQ</li>
+            <li>REST APIs</li>
+            <li>Microservices</li>
+            <li>Python</li>
+            <li>Node.js</li>
+            <li>TypeScript</li>
+            <li>React</li>
             <li>PostgreSQL</li>
+            <li>SQL Server</li>
+            <li>Oracle</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+            <li>AWS</li>
+            <li>Kubernetes</li>
+            <li>Docker</li>
+            <li>Argo CD</li>
+            <li>Azure</li>
+            <li>GitLab CI/CD</li>
+            <li>GitHub Actions</li>
+            <li>JUnit</li>
+            <li>Mockito</li>
+            <li>Apache Iceberg</li>
+            <li>Trino</li>
+            <li>Spark</li>
             <li>Kafka</li>
             <li>RabbitMQ</li>
-            <li>Redis</li>
-            <li>Spark</li>
-            <li>Trino</li>
-            <li>Iceberg</li>
-            <li>GitLab CI/CD</li>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>Bash</li>
-            <li>JavaScript/TypeScript</li>
-            <li>C/C++</li>
-            <li>C#</li>
-            <li>PHP</li>
-            <li>Perl</li>
+            <li>Grafana</li>
+            <li>OAuth2/OIDC</li>
+            <li>Claude Code</li>
         </ul>
     </div>
     <!-- End #skills -->
