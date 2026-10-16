@@ -1,116 +1,333 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-Close
-	•	About
-	•	Experience
-	•	Education
-	•	Projects
-	•	Skills
-Yaser Syed
-Lead Backend Engineer | Acting Development Manager
-Download Resume
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Syed Yaser Ahmed | Lead Backend Engineer</title>
+    <meta name="description" content="Syed Yaser Ahmed - Lead backend engineer building secure, high-availability Java systems with Spring Boot, AWS and Kubernetes.">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Yaser Syed</h1>
+            <h2>Lead Backend Engineer | Acting Development Manager</h2>
+            <a href="./Resume.pdf" class="btn-rounded-white" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Lead backend engineer with 10+ years building secure, high-availability Java systems with Spring Boot, RESTful microservices,
+                        and relational data models on AWS and Kubernetes. Hands-on with identity and access controls, including OAuth2/OIDC, JWT,
+                        role-based access control, and AWS IAM.
+                    </p>
+                    <p>
+                        I currently lead a team of 3 engineers on a 24/7 data platform serving 8 North American electricity markets while writing
+                        production code daily, and build Claude Code skills that automate development workflows, with every AI-generated change
+                        validated through peer review and automated testing.
+                    </p>
+                    <ul>
+                        <li><strong>Architecture:</strong> Event-Driven Architecture, Domain-Driven Design, System Design</li>
+                        <li><strong>Security &amp; Identity:</strong> OAuth2/OIDC, JWT, role-based access control, AWS IAM, secrets management</li>
+                        <li><strong>Cloud &amp; Containers:</strong> AWS (S3, EC2, EKS, IAM), Kubernetes, Docker, Argo CD (GitOps), Azure</li>
+                        <li><strong>Certification:</strong> Certified Kubernetes Application Developer (CKAD)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="Dec 2019 – Present">
+                <h3>PCI Energy Solutions</h3>
+                <h4>Acting Development Manager (Oct 2025 – Present)</h4>
+                <ul>
+                    <li>Lead 3 engineers on a Java/Spring Boot ingestion platform that integrates 8 North American electricity markets (MISO, SPP, CAISO, ERCOT, PJM, NYISO, ISO-NE, AESO), running 24/7 against a 30–60 minute publication-to-query SLA across AWS and on-prem clusters.</li>
+                    <li>Redesigned the ingestion framework so new market integrations use one shared pattern, replacing hundreds of bespoke per-report, per-table repository integrations.</li>
+                    <li>Own the roadmap for moving market integrations off legacy relational databases onto Spark, Trino, and Apache Iceberg; delivered AESO natively on the new stack, migrated ERCOT with zero downstream downtime, and now lead the MISO migration.</li>
+                    <li>Secured credentials and API keys for all 8 market integrations and scoped each service's AWS access through IAM roles and least-privilege policies on EKS.</li>
+                    <li>Built custom Claude Code skills that automate adding new market downloaders, migrating integrations to the lakehouse stack, and generating documentation; every AI-generated change passes code review and automated testing before merge.</li>
+                    <li>Mentor 3 engineers through design and code review, and hold design and code-review authority for teams outside the platform group.</li>
+                </ul>
+                <br />
+                <h4>Senior Software Developer (Jan 2023 – Oct 2025)</h4>
+                <ul>
+                    <li>Led the migration from PostgreSQL to an Apache Iceberg lakehouse with Spark ingestion and Trino query, removing the relational analytics bottleneck and enabling petabyte-scale analysis.</li>
+                    <li>Designed a common data model that normalizes per-market schemas for offers, prices, market results, dispatch instructions, and credit reports, turning each new market into an integration instead of a rewrite.</li>
+                    <li>Built Java 21 / Spring Boot REST ingestion services deployed to AWS (S3, EKS) and on-prem Kubernetes through Argo CD GitOps, using Redis, RabbitMQ, and Grafana for observability.</li>
+                    <li>Built the Java backend and Node.js/Express API for a real-time profit-and-loss analyzer for ERCOT market data; took over the React frontend and shipped features solo, then trained a support team and handed off the product.</li>
+                    <li>Migrated the MISO analytics backend from a Redis task-runner architecture to Iceberg, Spark, and Trino, simplifying schema evolution and cutting new-feature development time.</li>
+                    <li>Tuned data access with jOOQ and Spring Data JPA across PostgreSQL and Oracle, cloud and on-prem.</li>
+                </ul>
+                <br />
+                <h4>Software Developer (Dec 2019 – Jan 2023)</h4>
+                <ul>
+                    <li>Joined the founding team of PCI's MISO market analytics product, building scheduled ETL pipelines across SQL Server, Oracle, and PostgreSQL, then rebuilding the backend around a Redis-driven scheduler that spawns container-based executors on Kubernetes.</li>
+                    <li>Implemented OAuth2/OIDC authentication with JWT and role-based access control for Spring Boot microservices.</li>
+                    <li>Built Spring Boot microservices on Kubernetes, with performance tuning and automated testing in JUnit and Mockito.</li>
+                </ul>
+            </div>
+
+            <div data-date="2018 – 2019">
+                <h3>Cognizant Technologies</h3>
+                <h4>Software Engineer</h4>
+                <ul>
+                    <li>Built HIPAA-compliant claims-processing components in Core Java on Azure (Red Hat VMs), sustaining 99.9%+ uptime for thousands of healthcare providers.</li>
+                    <li>Cut operational overhead 40% through automation and workflow optimization.</li>
+                </ul>
+            </div>
+
+            <div data-date="2017 – 2018">
+                <h3>Eaton's Crouse-Hinds</h3>
+                <h4>Software Developer Co-op</h4>
+                <ul>
+                    <li>Optimized C firmware and ASP.NET dashboards for hazard-rated industrial lighting, and implemented WirelessHART commissioning protocols.</li>
+                </ul>
+            </div>
+
+            <div data-date="2013 – 2016">
+                <h3>Wipro Technologies</h3>
+                <h4>Project Engineer</h4>
+                <ul>
+                    <li>Built dashboard and workflow-automation tooling (Perl, shell, BMC Remedy, HP NNMi), cutting onboarding time 90%.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>Syracuse University</h3>
+            <span class="education-date">2018</span>
+            <h4>Master of Science in Computer Engineering</h4>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Anna University</h3>
+            <span class="education-date">2013</span>
+            <h4>Bachelor of Technology in Information Technology</h4>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" alt="" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Image Quality Determination</h3>
+                        <p>
+                            A neural network application that can predict Image quality depending on user’s previous preferences 
+                        </p>
+                        <a href="https://github.com/yasersyed/Image-Quality-Determination">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" alt="" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Remote Code Publisher</h3>
+                        <p>
+                            Each file to be published is a C++ source file. Our publisher will generate, for each of these, an HTML file, with most of the contents drawn from the code file along with links which leads to its dependencies 
+                        </p>
+                        <a href="https://github.com/yasersyed/Remote-Code-Publisher">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" alt="" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Type Based Dependency Analyzer</h3>
+                        <p>
+                            Can lexically analyze source code files to extract types such as classes, functions, structs, aliases and typedefs from individual files and find file dependencies.
+                        </p>
+                        <a href="https://github.com/yasersyed/Type-Based-dependency-Analyzer">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" alt="" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>No SQL Database</h3>
+                        <p>
+                            Developed a key/value noSQL database capable of handling complex database queries (union/intersection of keys). It utilizes a template class that provides an in-memory database containing information such as name, category and list of child relationships with other values. 
+                        </p>
+                        <a href="https://github.com/yasersyed/NoSQL-Database">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" alt="" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Remote Test Harness</h3>
+                        <p>
+                            The test harness is an automated testing tool, which tests a program unit by running it under various strategies and monitors the programs’ behavior and results. It is capable of running automated integration testing and unit testing. 
+                        </p>
+                        <a href="https://github.com/yasersyed/Remote-Test-Harness">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
 
 
-About Me
-Lead backend engineer with 10+ years building secure, high-availability Java systems with Spring Boot, RESTful microservices, and relational data models on AWS and Kubernetes. Hands-on with identity and access controls, including OAuth2/OIDC, JWT, role-based access control, and AWS IAM.
-I currently lead a team of 3 engineers on a 24/7 data platform serving 8 North American electricity markets while writing production code daily, and build Claude Code skills that automate development workflows, with every AI-generated change validated through peer review and automated testing.
-	•	Architecture: Event-Driven Architecture, Domain-Driven Design, System Design
-	•	Security & Identity: OAuth2/OIDC, JWT, role-based access control, AWS IAM, secrets management
-	•	Cloud & Containers: AWS (S3, EC2, EKS, IAM), Kubernetes, Docker, Argo CD (GitOps), Azure
-	•	Certification: Certified Kubernetes Application Developer (CKAD)
-Experience
-PCI Energy Solutions
-Acting Development Manager (Oct 2025 – Present)
-	•	Lead 3 engineers on a Java/Spring Boot ingestion platform that integrates 8 North American electricity markets (MISO, SPP, CAISO, ERCOT, PJM, NYISO, ISO-NE, AESO), running 24/7 against a 30–60 minute publication-to-query SLA across AWS and on-prem clusters.
-	•	Redesigned the ingestion framework so new market integrations use one shared pattern, replacing hundreds of bespoke per-report, per-table repository integrations.
-	•	Own the roadmap for moving market integrations off legacy relational databases onto Spark, Trino, and Apache Iceberg; delivered AESO natively on the new stack, migrated ERCOT with zero downstream downtime, and now lead the MISO migration.
-	•	Secured credentials and API keys for all 8 market integrations and scoped each service's AWS access through IAM roles and least-privilege policies on EKS.
-	•	Built custom Claude Code skills that automate adding new market downloaders, migrating integrations to the lakehouse stack, and generating documentation; every AI-generated change passes code review and automated testing before merge.
-	•	Mentor 3 engineers through design and code review, and hold design and code-review authority for teams outside the platform group.
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
 
-Senior Software Developer (Jan 2023 – Oct 2025)
-	•	Led the migration from PostgreSQL to an Apache Iceberg lakehouse with Spark ingestion and Trino query, removing the relational analytics bottleneck and enabling petabyte-scale analysis.
-	•	Designed a common data model that normalizes per-market schemas for offers, prices, market results, dispatch instructions, and credit reports, turning each new market into an integration instead of a rewrite.
-	•	Built Java 21 / Spring Boot REST ingestion services deployed to AWS (S3, EKS) and on-prem Kubernetes through Argo CD GitOps, using Redis, RabbitMQ, and Grafana for observability.
-	•	Built the Java backend and Node.js/Express API for a real-time profit-and-loss analyzer for ERCOT market data; took over the React frontend and shipped features solo, then trained a support team and handed off the product.
-	•	Migrated the MISO analytics backend from a Redis task-runner architecture to Iceberg, Spark, and Trino, simplifying schema evolution and cutting new-feature development time.
-	•	Tuned data access with jOOQ and Spring Data JPA across PostgreSQL and Oracle, cloud and on-prem.
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Spring Data JPA</li>
+            <li>jOOQ</li>
+            <li>REST APIs</li>
+            <li>Microservices</li>
+            <li>Python</li>
+            <li>Node.js</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>PostgreSQL</li>
+            <li>SQL Server</li>
+            <li>Oracle</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+            <li>AWS</li>
+            <li>Kubernetes</li>
+            <li>Docker</li>
+            <li>Argo CD</li>
+            <li>Azure</li>
+            <li>GitLab CI/CD</li>
+            <li>GitHub Actions</li>
+            <li>JUnit</li>
+            <li>Mockito</li>
+            <li>Apache Iceberg</li>
+            <li>Trino</li>
+            <li>Spark</li>
+            <li>Kafka</li>
+            <li>RabbitMQ</li>
+            <li>Grafana</li>
+            <li>OAuth2/OIDC</li>
+            <li>Claude Code</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
 
-Software Developer (Dec 2019 – Jan 2023)
-	•	Joined the founding team of PCI's MISO market analytics product, building scheduled ETL pipelines across SQL Server, Oracle, and PostgreSQL, then rebuilding the backend around a Redis-driven scheduler that spawns container-based executors on Kubernetes.
-	•	Implemented OAuth2/OIDC authentication with JWT and role-based access control for Spring Boot microservices.
-	•	Built Spring Boot microservices on Kubernetes, with performance tuning and automated testing in JUnit and Mockito.
-Cognizant Technologies
-Software Engineer
-	•	Built HIPAA-compliant claims-processing components in Core Java on Azure (Red Hat VMs), sustaining 99.9%+ uptime for thousands of healthcare providers.
-	•	Cut operational overhead 40% through automation and workflow optimization.
-Eaton's Crouse-Hinds
-Software Developer Co-op
-	•	Optimized C firmware and ASP.NET dashboards for hazard-rated industrial lighting, and implemented WirelessHART commissioning protocols.
-Wipro Technologies
-Project Engineer
-	•	Built dashboard and workflow-automation tooling (Perl, shell, BMC Remedy, HP NNMi), cutting onboarding time 90%.
-Education
-Syracuse University
-2018
-Master of Science in Computer Engineering
-Anna University
-2013
-Bachelor of Technology in Information Technology
-Projects
+ 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2026 Syed Yaser Ahmed
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/yasersyed/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/yasersyed" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
 
-Image Quality Determination
-A neural network application that can predict Image quality depending on user’s previous preferences
-View Project
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
 
-Remote Code Publisher
-Each file to be published is a C++ source file. Our publisher will generate, for each of these, an HTML file, with most of the contents drawn from the code file along with links which leads to its dependencies
-View Project
-
-Type Based Dependency Analyzer
-Can lexically analyze source code files to extract types such as classes, functions, structs, aliases and typedefs from individual files and find file dependencies.
-View Project
-
-No SQL Database
-Developed a key/value noSQL database capable of handling complex database queries (union/intersection of keys). It utilizes a template class that provides an in-memory database containing information such as name, category and list of child relationships with other values.
-View Project
-
-Remote Test Harness
-The test harness is an automated testing tool, which tests a program unit by running it under various strategies and monitors the programs’ behavior and results. It is capable of running automated integration testing and unit testing.
-View Project
-Skills
-	•	Java
-	•	Spring Boot
-	•	Spring Data JPA
-	•	jOOQ
-	•	REST APIs
-	•	Microservices
-	•	Python
-	•	Node.js
-	•	TypeScript
-	•	React
-	•	PostgreSQL
-	•	SQL Server
-	•	Oracle
-	•	MongoDB
-	•	Redis
-	•	AWS
-	•	Kubernetes
-	•	Docker
-	•	Argo CD
-	•	Azure
-	•	GitLab CI/CD
-	•	GitHub Actions
-	•	JUnit
-	•	Mockito
-	•	Apache Iceberg
-	•	Trino
-	•	Spark
-	•	Kafka
-	•	RabbitMQ
-	•	Grafana
-	•	OAuth2/OIDC
-	•	Claude Code
-Copyright © 2026 Syed Yaser Ahmed
-
-	•	
-	•	
+</html>
