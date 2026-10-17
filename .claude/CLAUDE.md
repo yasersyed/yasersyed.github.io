@@ -4,7 +4,7 @@ Personal portfolio for Syed Yaser Ahmed, served by GitHub Pages from `master` at
 
 ## The idea
 
-The page is a **workbench**: a green cutting mat with a parts cabinet on it. Each drawer is one language, framework or tool, labelled with label-maker tape. Opening a drawer writes its contents on an index card: where the tool was used, a short note, and the public repos built with it.
+The page is a **workbench**: a green cutting mat with a parts cabinet on it. Each drawer is one language, framework or tool, labelled with label-maker tape. Clicking a drawer pulls it out and lifts its index card into an overlay: where the tool was used, a short note, and the public repos built with it. Nothing is open on load.
 
 The site highlights **tools and side projects, not the day job**. Keep the job to the short "Day job" list. Earlier versions were rejected for being generic templates and for centring on the job, so don't drift back to a hero-plus-cards layout or job-first copy.
 
@@ -12,9 +12,9 @@ The site highlights **tools and side projects, not the day job**. Keep the job t
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The whole page: hero, cabinet, index card, "On the bench" projects, day job, school, and one `<template>` per drawer |
+| `index.html` | The whole page: hero, cabinet, the index card `<dialog>`, "On the bench" projects, day job, school, and one `<template>` per drawer |
 | `css/site.css` | All styles. Colour and font tokens are at the top in `:root` |
-| `js/site.js` | Drawer clicks (copies the matching `<template>` into the card) and the ruler numbers along the top |
+| `js/site.js` | Drawer overlay (copies the matching `<template>` into the card dialog and animates it out of the drawer and back) and the ruler numbers along the top |
 | `js/carousel.js` | Screenshot slideshow used on the bench (scroll-snap, arrows, dots, arrow keys) |
 | `images/apps/<project>/` | Screenshots, as WebP |
 | `images/stickers/` | Logo stickers stuck on the mat (SVG) |
@@ -33,7 +33,7 @@ A drawer is two pieces that share a slug: a button in the cabinet and a `<templa
 
 ```html
 <!-- In the right cabinet section -->
-<button type="button" class="drawer" data-tool="go" aria-pressed="false" aria-controls="card"><span class="tape black">Go</span><span class="parts" aria-hidden="true"><i></i></span></button>
+<button type="button" class="drawer" data-tool="go" aria-haspopup="dialog"><span class="tape black">Go</span><span class="parts" aria-hidden="true"><i></i></span></button>
 
 <!-- With the other templates -->
 <template id="tool-go"><h2 class="card-label"><span class="tape black">Go</span></h2><p class="where">Side projects</p><p class="note">One or two plain sentences in Yaser's voice.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/REPO">REPO</a> <span>· what it is</span></li></ul></template>
@@ -44,7 +44,7 @@ A drawer is two pieces that share a slug: a button in the cabinet and a `<templa
 - With no public repo, use `<li class="none">Work code, so nothing public yet.</li>`.
 - The tape colour matches the section: `black` Languages, `blue` Backend, `red` Infra & cloud, `yellow` Data, `white` Frontend, `silver` Workshop.
 - Only link repos that really use the tool. Check the repo first; don't guess.
-- The drawer open on page load is the one with `aria-pressed="true"` (currently Rust). Its card body is also copied into `<aside id="card">`, so the page works without JavaScript. To change the default, move `aria-pressed="true"` and replace the `#card` contents with the new template's body.
+- No drawer is open on load. The card is a modal `<dialog id="card">`. `js/site.js` fills `#card-body` from the template and gives the heading `id="card-title"`. Opening plays a Web Animations path (drawer → lifted → centre), and closing plays the same path reversed. Esc, the × button and clicking the backdrop all close it, and focus returns to the drawer. With reduced motion it only fades.
 
 ### Add a project to "On the bench"
 
@@ -78,6 +78,7 @@ im.resize((1280, round(im.height * 1280 / im.width))).save("out.webp", "WEBP", q
 How the existing ones were made:
 
 - **Habit Tracker:** run `yasersyed/habit-tracker` locally (MongoDB in Docker on 27017, backend on 5000, Vite on 3000). Register a demo user through `/api/auth/register`, then seed habits and about 90 days of records through `/api/habits` and `/api/records`. Log in with Playwright by putting the JWT in `localStorage.token`, and capture `/`, `/statistics` and `/calendar`. Leave the activity heatmap out of shots: it only counts the latest 20 records (the `/records/range` call has no `limit`).
+- **Nabata** (private repo `yasersyed/nabata`): start Postgres 15 in Docker on 5432, run `npm ci`, run `npm run db:migrate` with `DATABASE_URL` set, then `PORT=3100 node server.js` with `DATABASE_URL`, `POSTGRES_URL` and `AUTH_SECRET` set. Seed a user through `/api/auth/signup` (name, email, password), then plants through `/api/plants` and about 60 days of waterings through `/api/watering`. Log in by posting to `/api/auth/login` from Playwright's `context.request`, which sets the session cookie. Capture the month view with a busy day selected, a 16:10 crop of the calendar and day panels, and the phone view scrolled to the calendar. Perenual care lookup is optional and was left unconfigured.
 - **CKAD Practitioner:** run `cargo build --release`, launch the binary in `tmux new-session -d -x 96 -y 28`, press `h`, capture with `tmux capture-pane -e -p`, convert the ANSI to HTML (`ansi2html`), and screenshot that with Playwright.
 
 ## Checking a change
@@ -86,7 +87,8 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 
 - no console errors or failed requests
 - `document.documentElement.scrollWidth` equals the viewport width (no sideways scroll)
-- clicking each drawer shows a card with the same label (catches slug collisions)
+- clicking each drawer opens the dialog with a card of the same label (catches slug collisions), and Esc closes it (wait about 900ms between open and close for the animation)
+- the card closes with Esc, the × button and a backdrop click, stays open on a click inside it, and focus returns to the drawer
 - the focus ring is visible on the cabinet and the card (Tab to a drawer and a card link)
 
 ## Style and conventions
@@ -100,5 +102,5 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 
 ## Open items
 
-- **Nabata:** the bench card is a placeholder with TODO text. It needs screenshots, a description and a stack.
+- **Nabata:** the repo is private, so its bench card has no repo link and it isn't listed in any drawer. Add both if the repo goes public.
 - **Drawer notes:** the notes are drafts and should be reviewed in Yaser's own words.

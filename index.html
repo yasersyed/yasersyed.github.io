@@ -31,6 +31,7 @@
         <h1>Yaser Syed</h1>
         <p>I write Java for a living, and Rust, C++ and shell scripts for fun.</p>
         <p>This is my parts cabinet. Open a drawer to see what I've built with each tool.</p>
+        <noscript><p>The drawers need JavaScript to open.</p></noscript>
       </div>
       <nav class="links" aria-label="Elsewhere">
         <a class="tape black" href="https://github.com/yasersyed">GitHub</a>
@@ -45,63 +46,66 @@
       <section aria-label="Languages">
         <div class="section-head"><span class="tape black">Languages</span></div>
         <div class="drawers">
-          <button type="button" class="drawer" data-tool="java" aria-pressed="false" aria-controls="card"><span class="tape black">Java</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="rust" aria-pressed="true" aria-controls="card"><span class="tape black">Rust</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="python" aria-pressed="false" aria-controls="card"><span class="tape black">Python</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="typescript" aria-pressed="false" aria-controls="card"><span class="tape black">TypeScript</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="cpp" aria-pressed="false" aria-controls="card"><span class="tape black">C++</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="csharp" aria-pressed="false" aria-controls="card"><span class="tape black">C#</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="sql" aria-pressed="false" aria-controls="card"><span class="tape black">SQL</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="bash" aria-pressed="false" aria-controls="card"><span class="tape black">Bash</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="perl" aria-pressed="false" aria-controls="card"><span class="tape black">Perl</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="java" aria-haspopup="dialog"><span class="tape black">Java</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="rust" aria-haspopup="dialog"><span class="tape black">Rust</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="python" aria-haspopup="dialog"><span class="tape black">Python</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="typescript" aria-haspopup="dialog"><span class="tape black">TypeScript</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="cpp" aria-haspopup="dialog"><span class="tape black">C++</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="csharp" aria-haspopup="dialog"><span class="tape black">C#</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="sql" aria-haspopup="dialog"><span class="tape black">SQL</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="bash" aria-haspopup="dialog"><span class="tape black">Bash</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="perl" aria-haspopup="dialog"><span class="tape black">Perl</span><span class="parts" aria-hidden="true"></span></button>
         </div>
       </section>
       <section aria-label="Backend">
         <div class="section-head"><span class="tape blue">Backend</span></div>
         <div class="drawers">
-          <button type="button" class="drawer" data-tool="spring-boot" aria-pressed="false" aria-controls="card"><span class="tape blue">Spring Boot</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="node-js" aria-pressed="false" aria-controls="card"><span class="tape blue">Node.js</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="oauth2---jwt" aria-pressed="false" aria-controls="card"><span class="tape blue">OAuth2 / JWT</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="spring-boot" aria-haspopup="dialog"><span class="tape blue">Spring Boot</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="node-js" aria-haspopup="dialog"><span class="tape blue">Node.js</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="oauth2---jwt" aria-haspopup="dialog"><span class="tape blue">OAuth2 / JWT</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
       </section>
       <section aria-label="Infra &amp; cloud">
         <div class="section-head"><span class="tape red">Infra &amp; cloud</span></div>
         <div class="drawers">
-          <button type="button" class="drawer" data-tool="kubernetes" aria-pressed="false" aria-controls="card"><span class="tape red">Kubernetes</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="docker" aria-pressed="false" aria-controls="card"><span class="tape red">Docker</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="aws" aria-pressed="false" aria-controls="card"><span class="tape red">AWS</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="argo-cd" aria-pressed="false" aria-controls="card"><span class="tape red">Argo CD</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="ci-cd" aria-pressed="false" aria-controls="card"><span class="tape red">CI/CD</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="kubernetes" aria-haspopup="dialog"><span class="tape red">Kubernetes</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="docker" aria-haspopup="dialog"><span class="tape red">Docker</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="aws" aria-haspopup="dialog"><span class="tape red">AWS</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="argo-cd" aria-haspopup="dialog"><span class="tape red">Argo CD</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="ci-cd" aria-haspopup="dialog"><span class="tape red">CI/CD</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
       </section>
       <section aria-label="Data">
         <div class="section-head"><span class="tape yellow">Data</span></div>
         <div class="drawers">
-          <button type="button" class="drawer" data-tool="postgresql" aria-pressed="false" aria-controls="card"><span class="tape yellow">PostgreSQL</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="mongodb" aria-pressed="false" aria-controls="card"><span class="tape yellow">MongoDB</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="redis" aria-pressed="false" aria-controls="card"><span class="tape yellow">Redis</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="kafka" aria-pressed="false" aria-controls="card"><span class="tape yellow">Kafka</span><span class="parts" aria-hidden="true"></span></button>
-          <button type="button" class="drawer" data-tool="spark" aria-pressed="false" aria-controls="card"><span class="tape yellow">Spark</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="postgresql" aria-haspopup="dialog"><span class="tape yellow">PostgreSQL</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="mongodb" aria-haspopup="dialog"><span class="tape yellow">MongoDB</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="redis" aria-haspopup="dialog"><span class="tape yellow">Redis</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="kafka" aria-haspopup="dialog"><span class="tape yellow">Kafka</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="spark" aria-haspopup="dialog"><span class="tape yellow">Spark</span><span class="parts" aria-hidden="true"></span></button>
         </div>
       </section>
       <section aria-label="Frontend">
         <div class="section-head"><span class="tape white">Frontend</span></div>
         <div class="drawers">
-          <button type="button" class="drawer" data-tool="react" aria-pressed="false" aria-controls="card"><span class="tape white">React</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="ratatui" aria-pressed="false" aria-controls="card"><span class="tape white">Ratatui</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="react" aria-haspopup="dialog"><span class="tape white">React</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="ratatui" aria-haspopup="dialog"><span class="tape white">Ratatui</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
       </section>
       <section aria-label="Workshop">
         <div class="section-head"><span class="tape silver">Workshop</span></div>
         <div class="drawers">
-          <button type="button" class="drawer" data-tool="arch-linux" aria-pressed="false" aria-controls="card"><span class="tape silver">Arch Linux</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="esp32" aria-pressed="false" aria-controls="card"><span class="tape silver">ESP32</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="claude-code" aria-pressed="false" aria-controls="card"><span class="tape silver">Claude Code</span><span class="parts" aria-hidden="true"><i></i></span></button>
-          <button type="button" class="drawer" data-tool="ollama" aria-pressed="false" aria-controls="card"><span class="tape silver">Ollama</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="arch-linux" aria-haspopup="dialog"><span class="tape silver">Arch Linux</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="esp32" aria-haspopup="dialog"><span class="tape silver">ESP32</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="claude-code" aria-haspopup="dialog"><span class="tape silver">Claude Code</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="ollama" aria-haspopup="dialog"><span class="tape silver">Ollama</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
       </section>
       </div>
-      <aside class="card" id="card" aria-live="polite" aria-label="Open drawer"><h2 class="card-label"><span class="tape black">Rust</span></h2><p class="where">Side projects</p><p class="note">Learning it properly: worked through the Rust book, then wrote a terminal quiz app with Ratatui.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· terminal quiz app</span></li><li><a href="https://github.com/yasersyed/rust-programming-book">rust-programming-book</a> <span>· book exercises</span></li></ul></aside>
+      <dialog class="card" id="card" aria-labelledby="card-title">
+        <button type="button" class="card-close" aria-label="Put the card back">&times;</button>
+        <div id="card-body"></div>
+      </dialog>
     </div>
 
     <section class="shelf" id="apps">
@@ -178,11 +182,29 @@ void loop() {
         </article>
 
         <article class="project">
-          <div class="placeholder"><span>Nabata screenshots go here</span></div>
+          <div class="carousel" aria-roledescription="carousel" aria-label="Nabata screenshots">
+            <div class="carousel-track" tabindex="0">
+              <figure>
+                <img src="images/apps/nabata/month.webp" width="1280" height="800" alt="Plants, a month watering calendar and the selected day's waterings" loading="lazy">
+                <figcaption>Plants, a watering calendar and the day's log side by side</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/nabata/calendar.webp" width="1280" height="801" alt="Month calendar showing how many plants were watered each day, with the selected day's list" loading="lazy">
+                <figcaption>Each day shows what was watered; pick one to see or add entries</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/nabata/mobile.webp" width="780" height="1688" alt="Nabata's calendar on a phone" loading="lazy" class="tall">
+                <figcaption>Works on a phone too</figcaption>
+              </figure>
+            </div>
+            <button type="button" class="carousel-prev" aria-label="Previous screenshot">&lsaquo;</button>
+            <button type="button" class="carousel-next" aria-label="Next screenshot">&rsaquo;</button>
+            <div class="carousel-dots"></div>
+          </div>
           <div class="body">
             <span class="tape black">Nabata</span>
-            <p>TODO: one or two sentences on what Nabata does and who it's for.</p>
-            <div class="made"><span class="tape white">TODO</span></div>
+            <p>A plant care tracker: log waterings, see them on a month, week or day calendar, and look up care tips for each plant. Multi-user, with secure sessions.</p>
+            <div class="made"><span class="tape white">React</span><span class="tape white">Vite</span><span class="tape blue">Node.js</span><span class="tape yellow">PostgreSQL</span></div>
           </div>
         </article>
       </div>
