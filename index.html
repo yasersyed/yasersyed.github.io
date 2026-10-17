@@ -182,11 +182,29 @@ void loop() {
         </article>
 
         <article class="project">
-          <div class="placeholder"><span>Nabata screenshots go here</span></div>
+          <div class="carousel" aria-roledescription="carousel" aria-label="Nabata screenshots">
+            <div class="carousel-track" tabindex="0">
+              <figure>
+                <img src="images/apps/nabata/month.webp" width="1280" height="800" alt="Plants, a month watering calendar and the selected day's waterings" loading="lazy">
+                <figcaption>Plants, a watering calendar and the day's log side by side</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/nabata/calendar.webp" width="1280" height="801" alt="Month calendar showing how many plants were watered each day, with the selected day's list" loading="lazy">
+                <figcaption>Each day shows what was watered; pick one to see or add entries</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/nabata/mobile.webp" width="780" height="1688" alt="Nabata's calendar on a phone" loading="lazy" class="tall">
+                <figcaption>Works on a phone too</figcaption>
+              </figure>
+            </div>
+            <button type="button" class="carousel-prev" aria-label="Previous screenshot">&lsaquo;</button>
+            <button type="button" class="carousel-next" aria-label="Next screenshot">&rsaquo;</button>
+            <div class="carousel-dots"></div>
+          </div>
           <div class="body">
             <span class="tape black">Nabata</span>
-            <p>TODO: one or two sentences on what Nabata does and who it's for.</p>
-            <div class="made"><span class="tape white">TODO</span></div>
+            <p>A plant care tracker: log waterings, see them on a month, week or day calendar, and look up care tips for each plant. Multi-user, with secure sessions.</p>
+            <div class="made"><span class="tape white">React</span><span class="tape white">Vite</span><span class="tape blue">Node.js</span><span class="tape yellow">PostgreSQL</span></div>
           </div>
         </article>
       </div>

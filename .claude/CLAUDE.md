@@ -78,6 +78,7 @@ im.resize((1280, round(im.height * 1280 / im.width))).save("out.webp", "WEBP", q
 How the existing ones were made:
 
 - **Habit Tracker:** run `yasersyed/habit-tracker` locally (MongoDB in Docker on 27017, backend on 5000, Vite on 3000). Register a demo user through `/api/auth/register`, then seed habits and about 90 days of records through `/api/habits` and `/api/records`. Log in with Playwright by putting the JWT in `localStorage.token`, and capture `/`, `/statistics` and `/calendar`. Leave the activity heatmap out of shots: it only counts the latest 20 records (the `/records/range` call has no `limit`).
+- **Nabata** (private repo `yasersyed/nabata`): start Postgres 15 in Docker on 5432, run `npm ci`, run `npm run db:migrate` with `DATABASE_URL` set, then `PORT=3100 node server.js` with `DATABASE_URL`, `POSTGRES_URL` and `AUTH_SECRET` set. Seed a user through `/api/auth/signup` (name, email, password), then plants through `/api/plants` and about 60 days of waterings through `/api/watering`. Log in by posting to `/api/auth/login` from Playwright's `context.request`, which sets the session cookie. Capture the month view with a busy day selected, a 16:10 crop of the calendar and day panels, and the phone view scrolled to the calendar. Perenual care lookup is optional and was left unconfigured.
 - **CKAD Practitioner:** run `cargo build --release`, launch the binary in `tmux new-session -d -x 96 -y 28`, press `h`, capture with `tmux capture-pane -e -p`, convert the ANSI to HTML (`ansi2html`), and screenshot that with Playwright.
 
 ## Checking a change
@@ -101,5 +102,5 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 
 ## Open items
 
-- **Nabata:** the bench card is a placeholder with TODO text. It needs screenshots, a description and a stack.
+- **Nabata:** the repo is private, so its bench card has no repo link and it isn't listed in any drawer. Add both if the repo goes public.
 - **Drawer notes:** the notes are drafts and should be reviewed in Yaser's own words.
