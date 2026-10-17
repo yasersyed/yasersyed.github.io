@@ -4,7 +4,7 @@ Personal portfolio for Syed Yaser Ahmed, served by GitHub Pages from `master` at
 
 ## The idea
 
-The page is a **workbench**: a green cutting mat with a parts cabinet on it. Each drawer is one language, framework or tool, labelled with label-maker tape. Opening a drawer writes its contents on an index card: where the tool was used, a short note, and the public repos built with it.
+The page is a **workbench**: a green cutting mat with a parts cabinet on it. Each drawer is one language, framework or tool, labelled with label-maker tape. Clicking a drawer pulls it out and lifts its index card into an overlay: where the tool was used, a short note, and the public repos built with it. Nothing is open on load.
 
 The site highlights **tools and side projects, not the day job**. Keep the job to the short "Day job" list. Earlier versions were rejected for being generic templates and for centring on the job, so don't drift back to a hero-plus-cards layout or job-first copy.
 
@@ -12,9 +12,9 @@ The site highlights **tools and side projects, not the day job**. Keep the job t
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The whole page: hero, cabinet, index card, "On the bench" projects, day job, school, and one `<template>` per drawer |
+| `index.html` | The whole page: hero, cabinet, the index card `<dialog>`, "On the bench" projects, day job, school, and one `<template>` per drawer |
 | `css/site.css` | All styles. Colour and font tokens are at the top in `:root` |
-| `js/site.js` | Drawer clicks (copies the matching `<template>` into the card) and the ruler numbers along the top |
+| `js/site.js` | Drawer overlay (copies the matching `<template>` into the card dialog and animates it out of the drawer and back) and the ruler numbers along the top |
 | `js/carousel.js` | Screenshot slideshow used on the bench (scroll-snap, arrows, dots, arrow keys) |
 | `images/apps/<project>/` | Screenshots, as WebP |
 | `images/stickers/` | Logo stickers stuck on the mat (SVG) |
@@ -33,7 +33,7 @@ A drawer is two pieces that share a slug: a button in the cabinet and a `<templa
 
 ```html
 <!-- In the right cabinet section -->
-<button type="button" class="drawer" data-tool="go" aria-pressed="false" aria-controls="card"><span class="tape black">Go</span><span class="parts" aria-hidden="true"><i></i></span></button>
+<button type="button" class="drawer" data-tool="go" aria-haspopup="dialog"><span class="tape black">Go</span><span class="parts" aria-hidden="true"><i></i></span></button>
 
 <!-- With the other templates -->
 <template id="tool-go"><h2 class="card-label"><span class="tape black">Go</span></h2><p class="where">Side projects</p><p class="note">One or two plain sentences in Yaser's voice.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/REPO">REPO</a> <span>· what it is</span></li></ul></template>
@@ -44,7 +44,7 @@ A drawer is two pieces that share a slug: a button in the cabinet and a `<templa
 - With no public repo, use `<li class="none">Work code, so nothing public yet.</li>`.
 - The tape colour matches the section: `black` Languages, `blue` Backend, `red` Infra & cloud, `yellow` Data, `white` Frontend, `silver` Workshop.
 - Only link repos that really use the tool. Check the repo first; don't guess.
-- The drawer open on page load is the one with `aria-pressed="true"` (currently Rust). Its card body is also copied into `<aside id="card">`, so the page works without JavaScript. To change the default, move `aria-pressed="true"` and replace the `#card` contents with the new template's body.
+- No drawer is open on load. The card is a modal `<dialog id="card">`. `js/site.js` fills `#card-body` from the template and gives the heading `id="card-title"`. Opening plays a Web Animations path (drawer → lifted → centre), and closing plays the same path reversed. Esc, the × button and clicking the backdrop all close it, and focus returns to the drawer. With reduced motion it only fades.
 
 ### Add a project to "On the bench"
 
@@ -86,7 +86,8 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 
 - no console errors or failed requests
 - `document.documentElement.scrollWidth` equals the viewport width (no sideways scroll)
-- clicking each drawer shows a card with the same label (catches slug collisions)
+- clicking each drawer opens the dialog with a card of the same label (catches slug collisions), and Esc closes it (wait about 900ms between open and close for the animation)
+- the card closes with Esc, the × button and a backdrop click, stays open on a click inside it, and focus returns to the drawer
 - the focus ring is visible on the cabinet and the card (Tab to a drawer and a card link)
 
 ## Style and conventions

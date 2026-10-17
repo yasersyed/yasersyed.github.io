@@ -101,8 +101,8 @@ a { color: inherit; }
 a.tape { text-decoration: none; font-size: 0.9375rem; transition: transform 0.15s ease; }
 a.tape:hover { transform: translateY(-1px); }
 
-/* Bench: cabinet beside the index card */
-.bench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 28px; align-items: start; padding-bottom: 64px; }
+/* Bench: the cabinet; its index cards open as an overlay */
+.bench { padding-bottom: 64px; }
 
 .cabinet {
   background: var(--cabinet);
@@ -142,12 +142,16 @@ a.tape:hover { transform: translateY(-1px); }
 .parts { display: flex; gap: 4px; height: 6px; }
 .parts i { width: 6px; height: 6px; border-radius: 50%; background: rgba(40, 52, 64, 0.45); }
 .drawer:hover { transform: translateY(-2px); }
-.drawer[aria-pressed="true"] { transform: translateY(5px); box-shadow: inset 0 6px 12px rgba(30, 40, 50, 0.35); background: rgba(236, 242, 247, 0.5); }
+/* Pulled out toward you while its card is out */
+.drawer.is-open { z-index: 1; transform: translateY(6px) scale(1.06); box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.7); }
 
 /* Index card */
 .card {
-  position: sticky;
-  top: 20px;
+  width: min(400px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  border: 0;
+  margin: auto;
   background-color: var(--card);
   background-image:
     linear-gradient(90deg, transparent 38px, var(--card-margin) 38px, var(--card-margin) 39px, transparent 39px),
@@ -158,8 +162,24 @@ a.tape:hover { transform: translateY(-1px); }
   padding: 20px 22px 24px 54px;
   box-shadow: 0 16px 28px -14px rgba(0, 0, 0, 0.6);
   transform: rotate(0.6deg);
-  min-height: 420px;
+  min-height: 336px;
 }
+.card::backdrop { background: rgba(10, 22, 16, 0.6); }
+.card-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--card-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.card-close:hover { background: var(--card-rule); color: var(--card-ink); }
 .card .card-label { margin: 0; line-height: 28px; }
 .card .card-label .tape { font-size: 1.125rem; padding: 3px 8px 2px; vertical-align: 2px; }
 .card .where { margin: 0; font-size: 0.875rem; color: var(--card-muted); line-height: 28px; }
@@ -252,8 +272,6 @@ a.tape:hover { transform: translateY(-1px); }
   .sticker { position: static; width: 56px; }
 }
 @media (max-width: 900px) {
-  .bench { grid-template-columns: minmax(0, 1fr); }
-  .card { position: relative; top: 0; transform: none; min-height: 0; }
   .projects { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 520px) {
