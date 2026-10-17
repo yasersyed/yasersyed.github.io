@@ -16,7 +16,8 @@
             card.replaceChildren(tpl.content.cloneNode(true));
             // On phones the card sits below the cabinet, so bring it into view
             if (window.matchMedia('(max-width: 900px)').matches) {
-                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                card.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
             }
         });
     });
