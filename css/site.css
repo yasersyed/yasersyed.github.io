@@ -230,6 +230,27 @@ a.tape:hover { transform: translateY(-1px); }
 
 .foot { padding-block: 0 40px; color: var(--mat-muted); font-size: 0.875rem; }
 
+/* Stickers stuck on the mat, kept to empty areas so they never sit under text */
+.hero, .job { position: relative; }
+.hero > :not(.stickers), .job > :not(.stickers) { position: relative; z-index: 1; }
+.stickers { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.sticker {
+  position: absolute;
+  top: var(--y);
+  right: var(--x);
+  width: var(--s);
+  height: auto;
+  transform: rotate(var(--r));
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.35));
+}
+.stickers-hero { top: 34px; }
+
+@media (max-width: 1140px) {
+  .stickers { position: static; display: flex; flex-wrap: wrap; gap: 12px; padding-block: 4px 8px; }
+  .stickers-hero { order: 3; width: 100%; }
+  .stickers-job { margin-top: 28px; }
+  .sticker { position: static; width: 56px; }
+}
 @media (max-width: 900px) {
   .bench { grid-template-columns: minmax(0, 1fr); }
   .card { position: relative; top: 0; transform: none; min-height: 0; }

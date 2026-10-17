@@ -14,5 +14,15 @@ Neither grants any further rights.
 Fonts are loaded from Google Fonts under their own licenses and are not
 part of this repository.
 
+Third-party logos
+-----------------
+The stickers in images/stickers/ show logos that are trademarks of their
+respective owners. They are used only to indicate tools the author works
+with, imply no endorsement, and are not covered by the reservation above.
+The logo shapes come from Simple Icons (https://simpleicons.org, CC0 1.0).
+The Rust logo is (c) the Rust Foundation, licensed under CC BY-SA 4.0
+(https://creativecommons.org/licenses/by-sa/4.0/). The C# sticker is plain
+text and uses no Microsoft artwork.
+
 For permission requests, contact Syed Yaser Ahmed through
 https://www.linkedin.com/in/yasersyed.
