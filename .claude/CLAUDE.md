@@ -85,6 +85,7 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 - **Reuse:** extend `site.css` tokens and the existing `.tape`, `.drawer`, `.project` and carousel pieces before adding new ones.
 - **One look:** the page deliberately has no light/dark switch, because it's one physical scene.
 - **Contact details:** don't put a phone number or email on the page. The resume PDF has them.
+- **License:** all rights reserved (see `LICENSE`). Don't add open-source code that requires its own license notice without checking with Yaser, and keep the footer's copyright line.
 
 ## Open items
 
