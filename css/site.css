@@ -1,0 +1,243 @@
+/*
+  Workbench: a green self-healing cutting mat with a parts cabinet on it.
+  One drawer per tool; the open drawer's contents are written on an index card.
+  It's one physical scene, so there is a single look rather than light/dark themes.
+*/
+:root {
+  color-scheme: dark;
+  --mat: #2c5e48;
+  --mat-line: rgba(214, 238, 222, 0.13);
+  --mat-major: rgba(214, 238, 222, 0.28);
+  --mat-ink: #eef3ea;
+  --mat-muted: #b4cbbb;
+  --ruler: #e8d77a;
+  --cabinet: #c3c9cf;
+  --cabinet-edge: #9aa2ab;
+  --drawer: rgba(236, 242, 247, 0.72);
+  --card: #fbfaf6;
+  --card-ink: #1d2430;
+  --card-muted: #5a6474;
+  --card-rule: #c7d8ea;
+  --card-margin: #e39a9a;
+  --term: #101418;
+  --term-ink: #d4dbe2;
+
+  /* Label-maker tape, one colour per cabinet section */
+  --tape-black: #17191c;
+  --tape-blue: #1f4f9c;
+  --tape-red: #b3282d;
+  --tape-yellow: #f2cc2f;
+  --tape-white: #f4f4f1;
+  --tape-silver: #9ea6ad;
+
+  --font-label: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-code: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--mat);
+  /* Cutting-mat grid: fine lines every unit, heavy every five */
+  background-image:
+    linear-gradient(var(--mat-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-major) 1px, transparent 1px),
+    linear-gradient(var(--mat-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-line) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  color: var(--mat-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+img { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ruler); outline-offset: 3px; }
+
+.ruler { position: relative; height: 26px; overflow: hidden; border-bottom: 1px solid var(--mat-major); }
+.ruler span { position: absolute; top: 4px; transform: translateX(-50%); font-family: var(--font-label); font-weight: 600; font-size: 0.8125rem; color: var(--ruler); }
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Hero */
+.hero { padding-block: 44px 36px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.hero h1 { font-family: var(--font-label); font-weight: 700; font-size: clamp(3rem, 8vw, 5.5rem); line-height: 0.9; margin: 0 0 18px; letter-spacing: 0.01em; }
+.hero p { margin: 0; max-width: 36em; font-size: 1.125rem; }
+.hero p + p { margin-top: 8px; color: var(--mat-muted); font-size: 1rem; }
+.links { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* Label-maker tape */
+.tape {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  padding: 5px 9px 4px;
+  border-radius: 2px;
+  color: #fff;
+  /* Raised, embossed letters */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+.tape.black { background: var(--tape-black); }
+.tape.blue { background: var(--tape-blue); }
+.tape.red { background: var(--tape-red); }
+.tape.yellow { background: var(--tape-yellow); color: var(--tape-black); text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+.tape.white { background: var(--tape-white); color: var(--tape-black); text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); }
+.tape.silver { background: var(--tape-silver); color: var(--tape-black); text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45); }
+a.tape { text-decoration: none; font-size: 0.9375rem; transition: transform 0.15s ease; }
+a.tape:hover { transform: translateY(-1px); }
+
+/* Bench: cabinet beside the index card */
+.bench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 28px; align-items: start; padding-bottom: 64px; }
+
+.cabinet {
+  background: var(--cabinet);
+  border: 1px solid var(--cabinet-edge);
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.55), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.section-head { margin: 2px 2px 8px; }
+.section-head .tape { font-size: 0.8125rem; }
+.drawers { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
+.drawer {
+  position: relative;
+  appearance: none;
+  border: 1px solid rgba(80, 92, 104, 0.35);
+  border-radius: 3px;
+  background: var(--drawer);
+  min-height: 74px;
+  padding: 12px 8px 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: inset 0 -10px 14px -10px rgba(40, 50, 60, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  font: inherit;
+}
+/* Finger pull under the label */
+.drawer::after { content: ""; position: absolute; left: 50%; bottom: 6px; width: 34%; height: 5px; transform: translateX(-50%); border-radius: 0 0 6px 6px; background: rgba(60, 70, 80, 0.28); }
+.drawer .tape { font-size: 0.8125rem; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+/* Parts visible through the plastic: one dot per public project inside */
+.parts { display: flex; gap: 4px; height: 6px; }
+.parts i { width: 6px; height: 6px; border-radius: 50%; background: rgba(40, 52, 64, 0.45); }
+.drawer:hover { transform: translateY(-2px); }
+.drawer[aria-pressed="true"] { transform: translateY(5px); box-shadow: inset 0 6px 12px rgba(30, 40, 50, 0.35); background: rgba(236, 242, 247, 0.5); }
+
+/* Index card */
+.card {
+  position: sticky;
+  top: 20px;
+  background-color: var(--card);
+  background-image:
+    linear-gradient(90deg, transparent 38px, var(--card-margin) 38px, var(--card-margin) 39px, transparent 39px),
+    repeating-linear-gradient(transparent 0 27px, var(--card-rule) 27px 28px);
+  background-position: 0 0, 0 58px;
+  color: var(--card-ink);
+  border-radius: 3px;
+  padding: 20px 22px 24px 54px;
+  box-shadow: 0 16px 28px -14px rgba(0, 0, 0, 0.6);
+  transform: rotate(0.6deg);
+  min-height: 420px;
+}
+.card .card-label { margin: 0 0 6px; min-height: 30px; }
+.card .card-label .tape { font-size: 1.25rem; }
+.card .where { margin: 8px 0 12px; font-size: 0.875rem; color: var(--card-muted); line-height: 28px; }
+.card .note { margin: 0; line-height: 28px; }
+.card h3 { font-family: var(--font-label); font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--card-muted); margin: 28px 0 0; line-height: 28px; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li { line-height: 28px; }
+.card li a { color: var(--tape-blue); font-weight: 700; }
+.card li span { color: var(--card-muted); }
+.card .none { color: var(--card-muted); font-style: italic; }
+
+/* On the bench */
+.shelf { padding-block: 8px 64px; }
+.shelf > h2, .job > h2 { font-family: var(--font-label); font-weight: 700; font-size: 2rem; margin: 0 0 20px; letter-spacing: 0.02em; }
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.project { background: var(--card); color: var(--card-ink); border-radius: 3px; overflow: hidden; box-shadow: 0 14px 24px -14px rgba(0, 0, 0, 0.6); display: flex; flex-direction: column; min-width: 0; }
+/* Every project opens with a 16:10 picture so the cards line up */
+.project .shot, .project .code, .project .placeholder, .carousel img { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 10; }
+.project .shot { height: auto; object-fit: contain; background: var(--term); }
+.project .code { margin: 0; padding: 18px 20px; overflow: auto; background: var(--term); color: var(--term-ink); font-family: var(--font-code); font-size: 0.8125rem; line-height: 1.6; }
+.project .placeholder { display: flex; align-items: center; justify-content: center; border: 2px dashed var(--card-rule); margin: 0; color: var(--card-muted); font-family: var(--font-label); font-size: 1.125rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.project .body { padding: 16px 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; flex: 1; }
+.project .body p { margin: 0; color: var(--card-muted); font-size: 0.9375rem; }
+.project .made { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.project .made .tape { font-size: 0.6875rem; }
+.project a.repo { color: var(--tape-blue); font-weight: 700; font-size: 0.9375rem; }
+
+/* Screenshot slideshow */
+.carousel { position: relative; background: var(--term); }
+.carousel-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel figure { flex: 0 0 100%; margin: 0; scroll-snap-align: start; position: relative; }
+.carousel img { height: auto; object-fit: cover; object-position: top; }
+/* Phone shots are portrait; show them whole instead of cropping */
+.carousel img.tall { object-fit: contain; }
+.carousel figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 14px 26px; font-size: 0.8125rem; color: #fff; background: linear-gradient(to top, rgba(10, 14, 18, 0.8), rgba(10, 14, 18, 0)); }
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(251, 250, 246, 0.92);
+  color: var(--card-ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+.carousel-dots { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; }
+.carousel-dots button { width: 7px; height: 7px; margin: 0 3px; padding: 0; border: none; border-radius: 50%; background: rgba(255, 255, 255, 0.45); cursor: pointer; }
+.carousel-dots button[aria-current="true"] { background: var(--ruler); }
+.carousel.single .carousel-prev, .carousel.single .carousel-next { display: none; }
+
+/* Day job and school */
+.job { padding-block: 0 72px; }
+.job .school { margin-top: 40px; }
+.job ol { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+.job li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 1px solid var(--mat-major); }
+.job li:last-child { border-bottom: 1px solid var(--mat-major); }
+.job time { font-family: var(--font-label); font-weight: 600; font-size: 1.0625rem; color: var(--ruler); font-variant-numeric: tabular-nums; }
+.job strong { display: block; }
+.job span { color: var(--mat-muted); font-size: 0.9375rem; }
+
+.foot { padding-block: 0 40px; color: var(--mat-muted); font-size: 0.875rem; }
+
+@media (max-width: 900px) {
+  .bench { grid-template-columns: minmax(0, 1fr); }
+  .card { position: relative; top: 0; transform: none; min-height: 0; }
+  .projects { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .drawers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .job li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .drawer, a.tape { transition: none; }
+  .drawer:hover, a.tape:hover { transform: none; }
+}

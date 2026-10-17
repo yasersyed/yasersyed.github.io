@@ -1,399 +1,233 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Syed Yaser Ahmed | Lead Backend Engineer</title>
-    <meta name="description" content="Syed Yaser Ahmed - Lead backend engineer building secure, high-availability Java systems with Spring Boot, AWS and Kubernetes.">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yaser Syed</title>
+  <meta name="description" content="Yaser Syed: backend engineer. Java for a living; Rust, C++ and shell scripts for fun. Open a drawer to see what I've built with each tool.">
+  <meta property="og:title" content="Yaser Syed">
+  <meta property="og:description" content="Java for a living; Rust, C++ and shell scripts for fun.">
+  <meta property="og:image" content="https://yasersyed.github.io/images/apps/habit-tracker/habits.webp">
+  <meta name="theme-color" content="#2c5e48">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23c3c9cf'/%3E%3Crect x='4' y='5' width='24' height='9' rx='1.5' fill='%23ecf2f7'/%3E%3Crect x='4' y='18' width='24' height='9' rx='1.5' fill='%23ecf2f7'/%3E%3Crect x='9' y='8' width='14' height='3' fill='%2317191c'/%3E%3Crect x='9' y='21' width='14' height='3' fill='%23b3282d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#apps">Apps</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-        </ul>
+  <div class="ruler" id="ruler" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <h1>Yaser Syed</h1>
+        <p>I write Java for a living, and Rust, C++ and shell scripts for fun.</p>
+        <p>This is my parts cabinet. Open a drawer to see what I've built with each tool.</p>
+      </div>
+      <nav class="links" aria-label="Elsewhere">
+        <a class="tape black" href="https://github.com/yasersyed">GitHub</a>
+        <a class="tape blue" href="https://www.linkedin.com/in/yasersyed">LinkedIn</a>
+        <a class="tape white" href="Resume.pdf">Resume</a>
+      </nav>
     </header>
-    <!-- End header -->
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Yaser Syed</h1>
-            <h2>Lead Backend Engineer | Acting Development Manager</h2>
-            <a href="./Resume.pdf" class="btn-rounded-white" target="_blank" rel="noopener">Download Resume</a>
+    <main class="bench">
+      <div class="cabinet">
+      <section aria-label="Languages">
+        <div class="section-head"><span class="tape black">Languages</span></div>
+        <div class="drawers">
+          <button type="button" class="drawer" data-tool="java" aria-pressed="false" aria-controls="card"><span class="tape black">Java</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="rust" aria-pressed="true" aria-controls="card"><span class="tape black">Rust</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="python" aria-pressed="false" aria-controls="card"><span class="tape black">Python</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="typescript" aria-pressed="false" aria-controls="card"><span class="tape black">TypeScript</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="c" aria-pressed="false" aria-controls="card"><span class="tape black">C++</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="c" aria-pressed="false" aria-controls="card"><span class="tape black">C#</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="sql" aria-pressed="false" aria-controls="card"><span class="tape black">SQL</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="bash" aria-pressed="false" aria-controls="card"><span class="tape black">Bash</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="perl" aria-pressed="false" aria-controls="card"><span class="tape black">Perl</span><span class="parts" aria-hidden="true"></span></button>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
+      </section>
+      <section aria-label="Backend">
+        <div class="section-head"><span class="tape blue">Backend</span></div>
+        <div class="drawers">
+          <button type="button" class="drawer" data-tool="spring-boot" aria-pressed="false" aria-controls="card"><span class="tape blue">Spring Boot</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="node-js" aria-pressed="false" aria-controls="card"><span class="tape blue">Node.js</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="oauth2---jwt" aria-pressed="false" aria-controls="card"><span class="tape blue">OAuth2 / JWT</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="apps" class="background-alt">
-        <h2 class="heading">Apps</h2>
-        <div class="container">
-            <div class="app shadow-large">
-                <div class="carousel" aria-roledescription="carousel" aria-label="Habit Tracker screenshots">
-                    <div class="carousel-track" tabindex="0">
-                        <figure>
-                            <img src="images/apps/habit-tracker/habits.webp" width="1280" height="800" alt="Dashboard with streaks, XP rewards and one-tap completion" loading="lazy">
-                            <figcaption>Dashboard with streaks, XP rewards and one-tap completion</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/apps/habit-tracker/stats.webp" width="1280" height="800" alt="Statistics: completion rate, XP earned and daily trends" loading="lazy">
-                            <figcaption>Statistics: completion rate, XP earned and daily trends</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/apps/habit-tracker/calendar.webp" width="1280" height="800" alt="Monthly calendar for backfilling and reviewing history" loading="lazy">
-                            <figcaption>Monthly calendar for backfilling and reviewing history</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/apps/habit-tracker/stats-dark.webp" width="1280" height="800" alt="Dark mode, synced with the OS preference" loading="lazy">
-                            <figcaption>Dark mode, synced with the OS preference</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/apps/habit-tracker/mobile.webp" width="780" height="1688" alt="Responsive down to phone width" loading="lazy" class="tall">
-                            <figcaption>Responsive down to phone width</figcaption>
-                        </figure>
-                    </div>
-                    <button type="button" class="carousel-prev" aria-label="Previous screenshot"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-                    <button type="button" class="carousel-next" aria-label="Next screenshot"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                    <div class="carousel-dots"></div>
-                </div>
-                <div class="app-info">
-                    <h3>Habit Tracker</h3>
-                    <p>A gamified, full-stack habit tracker: XP and levels for every completion, per-habit streaks, a GitHub-style activity heatmap, calendar backfill, statistics, and CSV/JSON export. Ships with Docker images and Kubernetes manifests.</p>
-                    <ul class="app-tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li><li>Docker</li><li>Kubernetes</li></ul>
-                    <a href="https://github.com/yasersyed/habit-tracker" target="_blank" rel="noopener">View on GitHub</a>
-                </div>
-            </div>
-
-            <div class="app shadow-large">
-                <div class="carousel" aria-roledescription="carousel" aria-label="Nabata screenshots">
-                    <div class="carousel-track" tabindex="0">
-                        <figure class="placeholder">
-                            <div><i class="fa fa-picture-o" aria-hidden="true"></i><span>Nabata screenshots go here</span></div>
-                            <figcaption>Add 3–5 screenshots of Nabata</figcaption>
-                        </figure>
-                    </div>
-                    <button type="button" class="carousel-prev" aria-label="Previous screenshot"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-                    <button type="button" class="carousel-next" aria-label="Next screenshot"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                    <div class="carousel-dots"></div>
-                </div>
-                <div class="app-info">
-                    <h3>Nabata</h3>
-                    <p>TODO: one or two sentences on what Nabata does and who it's for.</p>
-                    <ul class="app-tags"><li>TODO</li></ul>
-                    
-                </div>
-            </div>
+      </section>
+      <section aria-label="Infra &amp; cloud">
+        <div class="section-head"><span class="tape red">Infra &amp; cloud</span></div>
+        <div class="drawers">
+          <button type="button" class="drawer" data-tool="kubernetes" aria-pressed="false" aria-controls="card"><span class="tape red">Kubernetes</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="docker" aria-pressed="false" aria-controls="card"><span class="tape red">Docker</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="aws" aria-pressed="false" aria-controls="card"><span class="tape red">AWS</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="argo-cd" aria-pressed="false" aria-controls="card"><span class="tape red">Argo CD</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="ci-cd" aria-pressed="false" aria-controls="card"><span class="tape red">CI/CD</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
-    </div>
-    <!-- End #apps -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Lead backend engineer with 10+ years building secure, high-availability Java systems with Spring Boot, RESTful microservices,
-                        and relational data models on AWS and Kubernetes. Hands-on with identity and access controls, including OAuth2/OIDC, JWT,
-                        role-based access control, and AWS IAM.
-                    </p>
-                    <p>
-                        I currently lead a team of 3 engineers on a 24/7 data platform serving 8 North American electricity markets while writing
-                        production code daily, and build Claude Code skills that automate development workflows, with every AI-generated change
-                        validated through peer review and automated testing.
-                    </p>
-                    <ul>
-                        <li><strong>Architecture:</strong> Event-Driven Architecture, Domain-Driven Design, System Design</li>
-                        <li><strong>Security &amp; Identity:</strong> OAuth2/OIDC, JWT, role-based access control, AWS IAM, secrets management</li>
-                        <li><strong>Cloud &amp; Containers:</strong> AWS (S3, EC2, EKS, IAM), Kubernetes, Docker, Argo CD (GitOps), Azure</li>
-                        <li><strong>Certification:</strong> Certified Kubernetes Application Developer (CKAD)</li>
-                    </ul>
-                </div>
-            </div>
+      </section>
+      <section aria-label="Data">
+        <div class="section-head"><span class="tape yellow">Data</span></div>
+        <div class="drawers">
+          <button type="button" class="drawer" data-tool="postgresql" aria-pressed="false" aria-controls="card"><span class="tape yellow">PostgreSQL</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="mongodb" aria-pressed="false" aria-controls="card"><span class="tape yellow">MongoDB</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="redis" aria-pressed="false" aria-controls="card"><span class="tape yellow">Redis</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="kafka" aria-pressed="false" aria-controls="card"><span class="tape yellow">Kafka</span><span class="parts" aria-hidden="true"></span></button>
+          <button type="button" class="drawer" data-tool="spark" aria-pressed="false" aria-controls="card"><span class="tape yellow">Spark</span><span class="parts" aria-hidden="true"></span></button>
         </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="Dec 2019 – Present">
-                <h3>PCI Energy Solutions</h3>
-                <h4>Acting Development Manager (Oct 2025 – Present)</h4>
-                <ul>
-                    <li>Lead 3 engineers on a Java/Spring Boot ingestion platform that integrates 8 North American electricity markets (MISO, SPP, CAISO, ERCOT, PJM, NYISO, ISO-NE, AESO), running 24/7 against a 30–60 minute publication-to-query SLA across AWS and on-prem clusters.</li>
-                    <li>Redesigned the ingestion framework so new market integrations use one shared pattern, replacing hundreds of bespoke per-report, per-table repository integrations.</li>
-                    <li>Own the roadmap for moving market integrations off legacy relational databases onto Spark, Trino, and Apache Iceberg; delivered AESO natively on the new stack, migrated ERCOT with zero downstream downtime, and now lead the MISO migration.</li>
-                    <li>Secured credentials and API keys for all 8 market integrations and scoped each service's AWS access through IAM roles and least-privilege policies on EKS.</li>
-                    <li>Built custom Claude Code skills that automate adding new market downloaders, migrating integrations to the lakehouse stack, and generating documentation; every AI-generated change passes code review and automated testing before merge.</li>
-                    <li>Mentor 3 engineers through design and code review, and hold design and code-review authority for teams outside the platform group.</li>
-                </ul>
-                <br />
-                <h4>Senior Software Developer (Jan 2023 – Oct 2025)</h4>
-                <ul>
-                    <li>Led the migration from PostgreSQL to an Apache Iceberg lakehouse with Spark ingestion and Trino query, removing the relational analytics bottleneck and enabling petabyte-scale analysis.</li>
-                    <li>Designed a common data model that normalizes per-market schemas for offers, prices, market results, dispatch instructions, and credit reports, turning each new market into an integration instead of a rewrite.</li>
-                    <li>Built Java 21 / Spring Boot REST ingestion services deployed to AWS (S3, EKS) and on-prem Kubernetes through Argo CD GitOps, using Redis, RabbitMQ, and Grafana for observability.</li>
-                    <li>Built the Java backend and Node.js/Express API for a real-time profit-and-loss analyzer for ERCOT market data; took over the React frontend and shipped features solo, then trained a support team and handed off the product.</li>
-                    <li>Migrated the MISO analytics backend from a Redis task-runner architecture to Iceberg, Spark, and Trino, simplifying schema evolution and cutting new-feature development time.</li>
-                    <li>Tuned data access with jOOQ and Spring Data JPA across PostgreSQL and Oracle, cloud and on-prem.</li>
-                </ul>
-                <br />
-                <h4>Software Developer (Dec 2019 – Jan 2023)</h4>
-                <ul>
-                    <li>Joined the founding team of PCI's MISO market analytics product, building scheduled ETL pipelines across SQL Server, Oracle, and PostgreSQL, then rebuilding the backend around a Redis-driven scheduler that spawns container-based executors on Kubernetes.</li>
-                    <li>Implemented OAuth2/OIDC authentication with JWT and role-based access control for Spring Boot microservices.</li>
-                    <li>Built Spring Boot microservices on Kubernetes, with performance tuning and automated testing in JUnit and Mockito.</li>
-                </ul>
-            </div>
-
-            <div data-date="2018 – 2019">
-                <h3>Cognizant Technologies</h3>
-                <h4>Software Engineer</h4>
-                <ul>
-                    <li>Built HIPAA-compliant claims-processing components in Core Java on Azure (Red Hat VMs), sustaining 99.9%+ uptime for thousands of healthcare providers.</li>
-                    <li>Cut operational overhead 40% through automation and workflow optimization.</li>
-                </ul>
-            </div>
-
-            <div data-date="2017 – 2018">
-                <h3>Eaton's Crouse-Hinds</h3>
-                <h4>Software Developer Co-op</h4>
-                <ul>
-                    <li>Optimized C firmware and ASP.NET dashboards for hazard-rated industrial lighting, and implemented WirelessHART commissioning protocols.</li>
-                </ul>
-            </div>
-
-            <div data-date="2013 – 2016">
-                <h3>Wipro Technologies</h3>
-                <h4>Project Engineer</h4>
-                <ul>
-                    <li>Built dashboard and workflow-automation tooling (Perl, shell, BMC Remedy, HP NNMi), cutting onboarding time 90%.</li>
-                </ul>
-            </div>
-
+      </section>
+      <section aria-label="Frontend">
+        <div class="section-head"><span class="tape white">Frontend</span></div>
+        <div class="drawers">
+          <button type="button" class="drawer" data-tool="react" aria-pressed="false" aria-controls="card"><span class="tape white">React</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="ratatui" aria-pressed="false" aria-controls="card"><span class="tape white">Ratatui</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>Syracuse University</h3>
-            <span class="education-date">2018</span>
-            <h4>Master of Science in Computer Engineering</h4>
+      </section>
+      <section aria-label="Workshop">
+        <div class="section-head"><span class="tape silver">Workshop</span></div>
+        <div class="drawers">
+          <button type="button" class="drawer" data-tool="arch-linux" aria-pressed="false" aria-controls="card"><span class="tape silver">Arch Linux</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="esp32" aria-pressed="false" aria-controls="card"><span class="tape silver">ESP32</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="claude-code" aria-pressed="false" aria-controls="card"><span class="tape silver">Claude Code</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="ollama" aria-pressed="false" aria-controls="card"><span class="tape silver">Ollama</span><span class="parts" aria-hidden="true"><i></i></span></button>
         </div>
-        <!-- End .education-block -->
+      </section>
+      </div>
+      <aside class="card" id="card" aria-live="polite"><h2 class="card-label"><span class="tape black">Rust</span></h2><p class="where">Side projects</p><p class="note">Learning it properly: worked through the Rust book, then wrote a terminal quiz app with Ratatui.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· terminal quiz app</span></li><li><a href="https://github.com/yasersyed/rust-programming-book">rust-programming-book</a> <span>· book exercises</span></li></ul></aside>
+    </main>
 
-        <div class="education-block">
-            <h3>Anna University</h3>
-            <span class="education-date">2013</span>
-            <h4>Bachelor of Technology in Information Technology</h4>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" alt="" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Image Quality Determination</h3>
-                        <p>
-                            A neural network application that can predict Image quality depending on user’s previous preferences 
-                        </p>
-                        <a href="https://github.com/yasersyed/Image-Quality-Determination">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" alt="" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Remote Code Publisher</h3>
-                        <p>
-                            Each file to be published is a C++ source file. Our publisher will generate, for each of these, an HTML file, with most of the contents drawn from the code file along with links which leads to its dependencies 
-                        </p>
-                        <a href="https://github.com/yasersyed/Remote-Code-Publisher">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" alt="" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Type Based Dependency Analyzer</h3>
-                        <p>
-                            Can lexically analyze source code files to extract types such as classes, functions, structs, aliases and typedefs from individual files and find file dependencies.
-                        </p>
-                        <a href="https://github.com/yasersyed/Type-Based-dependency-Analyzer">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" alt="" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>No SQL Database</h3>
-                        <p>
-                            Developed a key/value noSQL database capable of handling complex database queries (union/intersection of keys). It utilizes a template class that provides an in-memory database containing information such as name, category and list of child relationships with other values. 
-                        </p>
-                        <a href="https://github.com/yasersyed/NoSQL-Database">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" alt="" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Remote Test Harness</h3>
-                        <p>
-                            The test harness is an automated testing tool, which tests a program unit by running it under various strategies and monitors the programs’ behavior and results. It is capable of running automated integration testing and unit testing. 
-                        </p>
-                        <a href="https://github.com/yasersyed/Remote-Test-Harness">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-
-
+    <section class="shelf" id="apps">
+      <h2>On the bench</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="carousel" aria-roledescription="carousel" aria-label="Habit Tracker screenshots">
+            <div class="carousel-track" tabindex="0">
+              <figure>
+                <img src="images/apps/habit-tracker/habits.webp" width="1280" height="800" alt="Dashboard with streaks, XP rewards and one-tap completion" loading="lazy">
+                <figcaption>Dashboard with streaks, XP rewards and one-tap completion</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/habit-tracker/stats.webp" width="1280" height="800" alt="Statistics: completion rate, XP earned and daily trends" loading="lazy">
+                <figcaption>Statistics: completion rate, XP earned and daily trends</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/habit-tracker/calendar.webp" width="1280" height="800" alt="Monthly calendar for backfilling and reviewing history" loading="lazy">
+                <figcaption>Monthly calendar for backfilling and reviewing history</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/habit-tracker/stats-dark.webp" width="1280" height="800" alt="Dark mode, synced with the OS preference" loading="lazy">
+                <figcaption>Dark mode, synced with the OS preference</figcaption>
+              </figure>
+              <figure>
+                <img src="images/apps/habit-tracker/mobile.webp" width="780" height="1688" alt="Responsive down to phone width" loading="lazy" class="tall">
+                <figcaption>Responsive down to phone width</figcaption>
+              </figure>
             </div>
-        </div>
-    </div>
-    <!-- End #projects -->
+            <button type="button" class="carousel-prev" aria-label="Previous screenshot">&lsaquo;</button>
+            <button type="button" class="carousel-next" aria-label="Next screenshot">&rsaquo;</button>
+            <div class="carousel-dots"></div>
+          </div>
+          <div class="body">
+            <span class="tape black">Habit Tracker</span>
+            <p>Gamified habit tracking with XP, levels, streaks, a calendar and stats. Full stack, containerized, with Kubernetes manifests.</p>
+            <div class="made"><span class="tape white">React</span><span class="tape blue">Node.js</span><span class="tape yellow">MongoDB</span><span class="tape red">Kubernetes</span></div>
+            <a class="repo" href="https://github.com/yasersyed/habit-tracker">yasersyed/habit-tracker</a>
+          </div>
+        </article>
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>Spring Data JPA</li>
-            <li>jOOQ</li>
-            <li>REST APIs</li>
-            <li>Microservices</li>
-            <li>Python</li>
-            <li>Node.js</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>PostgreSQL</li>
-            <li>SQL Server</li>
-            <li>Oracle</li>
-            <li>MongoDB</li>
-            <li>Redis</li>
-            <li>AWS</li>
-            <li>Kubernetes</li>
-            <li>Docker</li>
-            <li>Argo CD</li>
-            <li>Azure</li>
-            <li>GitLab CI/CD</li>
-            <li>GitHub Actions</li>
-            <li>JUnit</li>
-            <li>Mockito</li>
-            <li>Apache Iceberg</li>
-            <li>Trino</li>
-            <li>Spark</li>
-            <li>Kafka</li>
-            <li>RabbitMQ</li>
-            <li>Grafana</li>
-            <li>OAuth2/OIDC</li>
-            <li>Claude Code</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
+        <article class="project">
+          <img class="shot" src="images/apps/ckad-practitioner/quiz.webp" width="1280" height="767" alt="CKAD Practitioner running in a terminal: a timed question with a hint showing the kubectl command" loading="lazy">
+          <div class="body">
+            <span class="tape black">CKAD Practitioner</span>
+            <p>A timed terminal quiz I wrote in Rust to study for the CKAD exam, with progressive hints.</p>
+            <div class="made"><span class="tape black">Rust</span><span class="tape white">Ratatui</span><span class="tape red">Kubernetes</span></div>
+            <a class="repo" href="https://github.com/yasersyed/ckad-practitioner">yasersyed/ckad-practitioner</a>
+          </div>
+        </article>
 
- 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2026 Syed Yaser Ahmed
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/yasersyed/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/yasersyed" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
+        <article class="project">
+          <pre class="code" aria-label="Excerpt from esp32_health_check.ino"><code>void printChipInfo() {
+  Serial.println(&quot;=== CHIP INFO ===&quot;);
+  Serial.printf(&quot;Model: %s\n&quot;, ESP.getChipModel());
+  Serial.printf(&quot;Revision: %d\n&quot;, ESP.getChipRevision());
+  Serial.printf(&quot;Cores: %d\n&quot;, ESP.getChipCores());
+  Serial.printf(&quot;CPU Frequency: %d MHz\n&quot;, ESP.getCpuFreqMHz());
+}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/carousel.js"></script>
+void loop() {
+  if (millis() - lastBlink &gt;= 1000) {
+    lastBlink = millis();
+    ledState = !ledState;
+    digitalWrite(LED_PIN, ledState ? HIGH : LOW);
+  }
+}</code></pre>
+          <div class="body">
+            <span class="tape black">ESP32 Lab</span>
+            <p>Board tests and a health check sketch for ESP32: chip and memory info, a Wi-Fi scan and an LED heartbeat.</p>
+            <div class="made"><span class="tape black">C++</span><span class="tape silver">Arduino</span><span class="tape silver">Arch Linux</span></div>
+            <a class="repo" href="https://github.com/yasersyed/esp32-lab">yasersyed/esp32-lab</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="placeholder"><span>Nabata screenshots go here</span></div>
+          <div class="body">
+            <span class="tape black">Nabata</span>
+            <p>TODO: one or two sentences on what Nabata does and who it's for.</p>
+            <div class="made"><span class="tape white">TODO</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="job">
+      <h2>Day job</h2>
+      <ol>
+        <li><time>2019 – now</time><div><strong>PCI Energy Solutions</strong><span>Acting development manager, previously senior software developer. Java and Spring Boot services on AWS and Kubernetes.</span></div></li>
+        <li><time>2018 – 2019</time><div><strong>Cognizant</strong><span>Software engineer. HIPAA-compliant claims processing in Java on Azure.</span></div></li>
+        <li><time>2017 – 2018</time><div><strong>Eaton's Crouse-Hinds</strong><span>Co-op. C firmware and ASP.NET dashboards for industrial lighting.</span></div></li>
+        <li><time>2013 – 2016</time><div><strong>Wipro</strong><span>Project engineer. Perl and shell dashboards and automation.</span></div></li>
+      </ol>
+      <h2 class="school">School</h2>
+      <ol>
+        <li><time>2018</time><div><strong>Syracuse University</strong><span>MS, Computer Engineering</span></div></li>
+        <li><time>2013</time><div><strong>Anna University</strong><span>B.Tech, Information Technology</span></div></li>
+      </ol>
+    </section>
+
+    <footer class="foot">&copy; 2026 Syed Yaser Ahmed</footer>
+  </div>
+
+  <template id="tool-java"><h2 class="card-label"><span class="tape black">Java</span></h2><p class="where">At work, daily</p><p class="note">My main language since 2018, from Java 8 to 21. Mostly Spring Boot services and data pipelines.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-rust"><h2 class="card-label"><span class="tape black">Rust</span></h2><p class="where">Side projects</p><p class="note">Learning it properly: worked through the Rust book, then wrote a terminal quiz app with Ratatui.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· terminal quiz app</span></li><li><a href="https://github.com/yasersyed/rust-programming-book">rust-programming-book</a> <span>· book exercises</span></li></ul></template>
+  <template id="tool-python"><h2 class="card-label"><span class="tape black">Python</span></h2><p class="where">At work, side projects, grad school</p><p class="note">Scripts at work, neural networks in grad school, and embeddings for a code search tool.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/code-search-engine">code-search-engine</a> <span>· embeddings + Ollama</span></li><li><a href="https://github.com/yasersyed/Image-Quality-Determination">Image-Quality-Determination</a> <span>· neural network</span></li><li><a href="https://github.com/yasersyed/asl-ml-immersion">asl-ml-immersion</a> <span>· ML labs</span></li></ul></template>
+  <template id="tool-typescript"><h2 class="card-label"><span class="tape black">TypeScript</span></h2><p class="where">At work, side projects</p><p class="note">React and Node.js. Took over a React frontend at work, and built habit-tracker end to end.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· full-stack app</span></li><li><a href="https://github.com/yasersyed/node_projects">node_projects</a> <span>· Node experiments</span></li><li><a href="https://github.com/yasersyed/profiles-app">profiles-app</a> <span>· login + profile app</span></li></ul></template>
+  <template id="tool-c"><h2 class="card-label"><span class="tape black">C++</span></h2><p class="where">At work, grad school, side projects</p><p class="note">Firmware at Eaton, a code publisher and dependency analyzer in grad school, and ESP32 sketches now.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/Remote-Code-Publisher">Remote-Code-Publisher</a> <span>· C++ to HTML publisher</span></li><li><a href="https://github.com/yasersyed/Type-Based-dependency-Analyzer">Type-Based-dependency-Analyzer</a> <span>· lexical analyzer</span></li><li><a href="https://github.com/yasersyed/NoSQL-Database">NoSQL-Database</a> <span>· key/value store</span></li><li><a href="https://github.com/yasersyed/esp32-lab">esp32-lab</a> <span>· Arduino sketches</span></li></ul></template>
+  <template id="tool-c"><h2 class="card-label"><span class="tape black">C#</span></h2><p class="where">Grad school, at work</p><p class="note">A remote test harness in grad school, and ASP.NET dashboards at Eaton.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/Remote-Test-Harness">Remote-Test-Harness</a> <span>· automated test harness</span></li></ul></template>
+  <template id="tool-sql"><h2 class="card-label"><span class="tape black">SQL</span></h2><p class="where">At work, daily</p><p class="note">SQL Server, PostgreSQL and Oracle. Data modeling and query tuning.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-bash"><h2 class="card-label"><span class="tape black">Bash</span></h2><p class="where">At work, side projects</p><p class="note">Glue for everything, including a custom KDE menu on my Arch machine.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/linux-configs">linux-configs</a> <span>· KDE custom menu</span></li></ul></template>
+  <template id="tool-perl"><h2 class="card-label"><span class="tape black">Perl</span></h2><p class="where">Where I started</p><p class="note">Dashboards and automation at Wipro, 2013 to 2016.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-spring-boot"><h2 class="card-label"><span class="tape blue">Spring Boot</span></h2><p class="where">At work, daily</p><p class="note">Spring MVC, Spring Data JPA and jOOQ for REST services.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-node-js"><h2 class="card-label"><span class="tape blue">Node.js</span></h2><p class="where">At work, side projects</p><p class="note">Express APIs, including an analyzer backend at work and the habit-tracker API.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· Express API</span></li><li><a href="https://github.com/yasersyed/node_projects">node_projects</a> <span>· Express + Pug</span></li></ul></template>
+  <template id="tool-oauth2---jwt"><h2 class="card-label"><span class="tape blue">OAuth2 / JWT</span></h2><p class="where">At work, side projects</p><p class="note">OAuth2/OIDC with role-based access at work; JWT auth in habit-tracker.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· JWT auth</span></li></ul></template>
+  <template id="tool-kubernetes"><h2 class="card-label"><span class="tape red">Kubernetes</span></h2><p class="where">At work, side projects</p><p class="note">CKAD certified. I wrote a Rust quiz app to study for the exam.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad">ckad</a> <span>· exam practice</span></li><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· study quiz</span></li><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· kube manifests</span></li></ul></template>
+  <template id="tool-docker"><h2 class="card-label"><span class="tape red">Docker</span></h2><p class="where">At work, side projects</p><p class="note">Everything I ship runs in a container.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· Compose + images</span></li></ul></template>
+  <template id="tool-aws"><h2 class="card-label"><span class="tape red">AWS</span></h2><p class="where">At work</p><p class="note">S3, EC2, EKS and IAM, with least-privilege roles per service.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-argo-cd"><h2 class="card-label"><span class="tape red">Argo CD</span></h2><p class="where">At work</p><p class="note">GitOps deployments to cloud and on-prem clusters.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-ci-cd"><h2 class="card-label"><span class="tape red">CI/CD</span></h2><p class="where">At work, side projects</p><p class="note">GitLab CI at work, GitHub Actions at home.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· GitHub Actions</span></li></ul></template>
+  <template id="tool-postgresql"><h2 class="card-label"><span class="tape yellow">PostgreSQL</span></h2><p class="where">At work</p><p class="note">Relational modeling and tuning across cloud and on-prem.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-mongodb"><h2 class="card-label"><span class="tape yellow">MongoDB</span></h2><p class="where">Side projects</p><p class="note">The data store behind habit-tracker.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· Mongoose models</span></li></ul></template>
+  <template id="tool-redis"><h2 class="card-label"><span class="tape yellow">Redis</span></h2><p class="where">At work</p><p class="note">Caching and a Redis-driven job scheduler.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-kafka"><h2 class="card-label"><span class="tape yellow">Kafka</span></h2><p class="where">At work</p><p class="note">Kafka and RabbitMQ for messaging between services.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-spark"><h2 class="card-label"><span class="tape yellow">Spark</span></h2><p class="where">At work</p><p class="note">Spark, Trino and Apache Iceberg for petabyte-scale analytics.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
+  <template id="tool-react"><h2 class="card-label"><span class="tape white">React</span></h2><p class="where">At work, side projects</p><p class="note">Shipped features solo on a React app at work; built the habit-tracker UI.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· React + Vite</span></li></ul></template>
+  <template id="tool-ratatui"><h2 class="card-label"><span class="tape white">Ratatui</span></h2><p class="where">Side projects</p><p class="note">Terminal UIs in Rust. My favourite way to build small tools.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· quiz TUI</span></li></ul></template>
+  <template id="tool-arch-linux"><h2 class="card-label"><span class="tape silver">Arch Linux</span></h2><p class="where">Daily driver</p><p class="note">My everyday OS, with KDE. The esp32-lab README even has the Arch serial-port fix.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/linux-configs">linux-configs</a> <span>· KDE configs</span></li><li><a href="https://github.com/yasersyed/esp32-lab">esp32-lab</a> <span>· Arch setup notes</span></li></ul></template>
+  <template id="tool-esp32"><h2 class="card-label"><span class="tape silver">ESP32</span></h2><p class="where">Side projects</p><p class="note">Getting into hardware: board tests, Wi-Fi scans and a heartbeat LED.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/esp32-lab">esp32-lab</a> <span>· health check sketch</span></li></ul></template>
+  <template id="tool-claude-code"><h2 class="card-label"><span class="tape silver">Claude Code</span></h2><p class="where">At work, side projects</p><p class="note">I write custom skills that scaffold and migrate code, and every change still goes through review and tests.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· claude.md</span></li></ul></template>
+  <template id="tool-ollama"><h2 class="card-label"><span class="tape silver">Ollama</span></h2><p class="where">Side projects</p><p class="note">Local models for code understanding, paired with Sentence-BERT embeddings.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/code-search-engine">code-search-engine</a> <span>· code search</span></li></ul></template>
+
+  <script src="js/site.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
-
 </html>
