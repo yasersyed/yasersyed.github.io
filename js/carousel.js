@@ -4,6 +4,8 @@
     scrollLeft, which keeps all three input methods in sync.
 */
 (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
     document.querySelectorAll('.carousel').forEach(function (carousel) {
         var track = carousel.querySelector('.carousel-track');
         var slides = track.children;
@@ -33,7 +35,7 @@
         function go(i) {
             // Wrap around so the arrows never dead-end
             target = (i + slides.length) % slides.length;
-            track.scrollTo({ left: target * track.clientWidth, behavior: 'smooth' });
+            track.scrollTo({ left: target * track.clientWidth, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
         }
 
         function sync() {

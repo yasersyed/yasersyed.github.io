@@ -7,7 +7,13 @@
   <meta name="description" content="Yaser Syed: backend engineer. Java for a living; Rust, C++ and shell scripts for fun. Open a drawer to see what I've built with each tool.">
   <meta property="og:title" content="Yaser Syed">
   <meta property="og:description" content="Java for a living; Rust, C++ and shell scripts for fun.">
-  <meta property="og:image" content="https://yasersyed.github.io/images/apps/habit-tracker/habits.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yasersyed.github.io/">
+  <meta property="og:image" content="https://yasersyed.github.io/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yaser Syed's workbench: a parts cabinet of labelled drawers, one per language and tool">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#2c5e48">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23c3c9cf'/%3E%3Crect x='4' y='5' width='24' height='9' rx='1.5' fill='%23ecf2f7'/%3E%3Crect x='4' y='18' width='24' height='9' rx='1.5' fill='%23ecf2f7'/%3E%3Crect x='9' y='8' width='14' height='3' fill='%2317191c'/%3E%3Crect x='9' y='21' width='14' height='3' fill='%23b3282d'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +38,8 @@
       </nav>
     </header>
 
-    <main class="bench">
+    <main>
+    <div class="bench">
       <div class="cabinet">
       <section aria-label="Languages">
         <div class="section-head"><span class="tape black">Languages</span></div>
@@ -41,8 +48,8 @@
           <button type="button" class="drawer" data-tool="rust" aria-pressed="true" aria-controls="card"><span class="tape black">Rust</span><span class="parts" aria-hidden="true"><i></i><i></i></span></button>
           <button type="button" class="drawer" data-tool="python" aria-pressed="false" aria-controls="card"><span class="tape black">Python</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
           <button type="button" class="drawer" data-tool="typescript" aria-pressed="false" aria-controls="card"><span class="tape black">TypeScript</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="c" aria-pressed="false" aria-controls="card"><span class="tape black">C++</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
-          <button type="button" class="drawer" data-tool="c" aria-pressed="false" aria-controls="card"><span class="tape black">C#</span><span class="parts" aria-hidden="true"><i></i></span></button>
+          <button type="button" class="drawer" data-tool="cpp" aria-pressed="false" aria-controls="card"><span class="tape black">C++</span><span class="parts" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+          <button type="button" class="drawer" data-tool="csharp" aria-pressed="false" aria-controls="card"><span class="tape black">C#</span><span class="parts" aria-hidden="true"><i></i></span></button>
           <button type="button" class="drawer" data-tool="sql" aria-pressed="false" aria-controls="card"><span class="tape black">SQL</span><span class="parts" aria-hidden="true"></span></button>
           <button type="button" class="drawer" data-tool="bash" aria-pressed="false" aria-controls="card"><span class="tape black">Bash</span><span class="parts" aria-hidden="true"><i></i></span></button>
           <button type="button" class="drawer" data-tool="perl" aria-pressed="false" aria-controls="card"><span class="tape black">Perl</span><span class="parts" aria-hidden="true"></span></button>
@@ -93,8 +100,8 @@
         </div>
       </section>
       </div>
-      <aside class="card" id="card" aria-live="polite"><h2 class="card-label"><span class="tape black">Rust</span></h2><p class="where">Side projects</p><p class="note">Learning it properly: worked through the Rust book, then wrote a terminal quiz app with Ratatui.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· terminal quiz app</span></li><li><a href="https://github.com/yasersyed/rust-programming-book">rust-programming-book</a> <span>· book exercises</span></li></ul></aside>
-    </main>
+      <aside class="card" id="card" aria-live="polite" aria-label="Open drawer"><h2 class="card-label"><span class="tape black">Rust</span></h2><p class="where">Side projects</p><p class="note">Learning it properly: worked through the Rust book, then wrote a terminal quiz app with Ratatui.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· terminal quiz app</span></li><li><a href="https://github.com/yasersyed/rust-programming-book">rust-programming-book</a> <span>· book exercises</span></li></ul></aside>
+    </div>
 
     <section class="shelf" id="apps">
       <h2>On the bench</h2>
@@ -195,6 +202,8 @@ void loop() {
       </ol>
     </section>
 
+    </main>
+
     <footer class="foot">&copy; 2026 Syed Yaser Ahmed. All rights reserved.</footer>
   </div>
 
@@ -202,8 +211,8 @@ void loop() {
   <template id="tool-rust"><h2 class="card-label"><span class="tape black">Rust</span></h2><p class="where">Side projects</p><p class="note">Learning it properly: worked through the Rust book, then wrote a terminal quiz app with Ratatui.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/ckad-practitioner">ckad-practitioner</a> <span>· terminal quiz app</span></li><li><a href="https://github.com/yasersyed/rust-programming-book">rust-programming-book</a> <span>· book exercises</span></li></ul></template>
   <template id="tool-python"><h2 class="card-label"><span class="tape black">Python</span></h2><p class="where">At work, side projects, grad school</p><p class="note">Scripts at work, neural networks in grad school, and embeddings for a code search tool.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/code-search-engine">code-search-engine</a> <span>· embeddings + Ollama</span></li><li><a href="https://github.com/yasersyed/Image-Quality-Determination">Image-Quality-Determination</a> <span>· neural network</span></li><li><a href="https://github.com/yasersyed/asl-ml-immersion">asl-ml-immersion</a> <span>· ML labs</span></li></ul></template>
   <template id="tool-typescript"><h2 class="card-label"><span class="tape black">TypeScript</span></h2><p class="where">At work, side projects</p><p class="note">React and Node.js. Took over a React frontend at work, and built habit-tracker end to end.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/habit-tracker">habit-tracker</a> <span>· full-stack app</span></li><li><a href="https://github.com/yasersyed/node_projects">node_projects</a> <span>· Node experiments</span></li><li><a href="https://github.com/yasersyed/profiles-app">profiles-app</a> <span>· login + profile app</span></li></ul></template>
-  <template id="tool-c"><h2 class="card-label"><span class="tape black">C++</span></h2><p class="where">At work, grad school, side projects</p><p class="note">Firmware at Eaton, a code publisher and dependency analyzer in grad school, and ESP32 sketches now.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/Remote-Code-Publisher">Remote-Code-Publisher</a> <span>· C++ to HTML publisher</span></li><li><a href="https://github.com/yasersyed/Type-Based-dependency-Analyzer">Type-Based-dependency-Analyzer</a> <span>· lexical analyzer</span></li><li><a href="https://github.com/yasersyed/NoSQL-Database">NoSQL-Database</a> <span>· key/value store</span></li><li><a href="https://github.com/yasersyed/esp32-lab">esp32-lab</a> <span>· Arduino sketches</span></li></ul></template>
-  <template id="tool-c"><h2 class="card-label"><span class="tape black">C#</span></h2><p class="where">Grad school, at work</p><p class="note">A remote test harness in grad school, and ASP.NET dashboards at Eaton.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/Remote-Test-Harness">Remote-Test-Harness</a> <span>· automated test harness</span></li></ul></template>
+  <template id="tool-cpp"><h2 class="card-label"><span class="tape black">C++</span></h2><p class="where">At work, grad school, side projects</p><p class="note">Firmware at Eaton, a code publisher and dependency analyzer in grad school, and ESP32 sketches now.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/Remote-Code-Publisher">Remote-Code-Publisher</a> <span>· C++ to HTML publisher</span></li><li><a href="https://github.com/yasersyed/Type-Based-dependency-Analyzer">Type-Based-dependency-Analyzer</a> <span>· lexical analyzer</span></li><li><a href="https://github.com/yasersyed/NoSQL-Database">NoSQL-Database</a> <span>· key/value store</span></li><li><a href="https://github.com/yasersyed/esp32-lab">esp32-lab</a> <span>· Arduino sketches</span></li></ul></template>
+  <template id="tool-csharp"><h2 class="card-label"><span class="tape black">C#</span></h2><p class="where">Grad school, at work</p><p class="note">A remote test harness in grad school, and ASP.NET dashboards at Eaton.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/Remote-Test-Harness">Remote-Test-Harness</a> <span>· automated test harness</span></li></ul></template>
   <template id="tool-sql"><h2 class="card-label"><span class="tape black">SQL</span></h2><p class="where">At work, daily</p><p class="note">SQL Server, PostgreSQL and Oracle. Data modeling and query tuning.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>
   <template id="tool-bash"><h2 class="card-label"><span class="tape black">Bash</span></h2><p class="where">At work, side projects</p><p class="note">Glue for everything, including a custom KDE menu on my Arch machine.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/linux-configs">linux-configs</a> <span>· KDE custom menu</span></li></ul></template>
   <template id="tool-perl"><h2 class="card-label"><span class="tape black">Perl</span></h2><p class="where">Where I started</p><p class="note">Dashboards and automation at Wipro, 2013 to 2016.</p><h3>Built with it</h3><ul><li class="none">Work code, so nothing public yet.</li></ul></template>

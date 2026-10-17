@@ -56,6 +56,8 @@ body {
 img { max-width: 100%; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--ruler); outline-offset: 3px; }
+/* The yellow ring disappears on light surfaces, so switch to blue there */
+.cabinet :focus-visible, .card :focus-visible, .project :focus-visible, a.tape.white:focus-visible { outline-color: var(--tape-blue); }
 
 .ruler { position: relative; height: 26px; overflow: hidden; border-bottom: 1px solid var(--mat-major); }
 .ruler span { position: absolute; top: 4px; transform: translateX(-50%); font-family: var(--font-label); font-weight: 600; font-size: 0.8125rem; color: var(--ruler); }
@@ -150,7 +152,7 @@ a.tape:hover { transform: translateY(-1px); }
   background-image:
     linear-gradient(90deg, transparent 38px, var(--card-margin) 38px, var(--card-margin) 39px, transparent 39px),
     repeating-linear-gradient(transparent 0 27px, var(--card-rule) 27px 28px);
-  background-position: 0 0, 0 58px;
+  background-position: 0 0, 0 20px;
   color: var(--card-ink);
   border-radius: 3px;
   padding: 20px 22px 24px 54px;
@@ -158,9 +160,9 @@ a.tape:hover { transform: translateY(-1px); }
   transform: rotate(0.6deg);
   min-height: 420px;
 }
-.card .card-label { margin: 0 0 6px; min-height: 30px; }
-.card .card-label .tape { font-size: 1.25rem; }
-.card .where { margin: 8px 0 12px; font-size: 0.875rem; color: var(--card-muted); line-height: 28px; }
+.card .card-label { margin: 0; line-height: 28px; }
+.card .card-label .tape { font-size: 1.125rem; padding: 3px 8px 2px; vertical-align: 2px; }
+.card .where { margin: 0; font-size: 0.875rem; color: var(--card-muted); line-height: 28px; }
 .card .note { margin: 0; line-height: 28px; }
 .card h3 { font-family: var(--font-label); font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--card-muted); margin: 28px 0 0; line-height: 28px; }
 .card ul { list-style: none; margin: 0; padding: 0; }

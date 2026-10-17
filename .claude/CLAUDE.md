@@ -37,7 +37,7 @@ A drawer is two pieces that share a slug: a button in the cabinet and a `<templa
 <template id="tool-go"><h2 class="card-label"><span class="tape black">Go</span></h2><p class="where">Side projects</p><p class="note">One or two plain sentences in Yaser's voice.</p><h3>Built with it</h3><ul><li><a href="https://github.com/yasersyed/REPO">REPO</a> <span>· what it is</span></li></ul></template>
 ```
 
-- `data-tool="go"` must match `id="tool-go"`.
+- `data-tool="go"` must match `id="tool-go"`, and each slug must be unique. Spell out symbols (`cpp`, `csharp`); stripping them made C++ and C# collide once.
 - Use one `<i></i>` in `.parts` per repo listed. The dots stand for the parts visible through the drawer.
 - With no public repo, use `<li class="none">Work code, so nothing public yet.</li>`.
 - The tape colour matches the section: `black` Languages, `blue` Backend, `red` Infra & cloud, `yellow` Data, `white` Frontend, `silver` Workshop.
@@ -76,7 +76,8 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 
 - no console errors or failed requests
 - `document.documentElement.scrollWidth` equals the viewport width (no sideways scroll)
-- clicking a drawer swaps the card
+- clicking each drawer shows a card with the same label (catches slug collisions)
+- the focus ring is visible on the cabinet and the card (Tab to a drawer and a card link)
 
 ## Style and conventions
 
