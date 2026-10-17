@@ -1,18 +1,57 @@
-Copyright (c) 2026 Syed Yaser Ahmed. All rights reserved.
+MIT License
 
-This repository and everything in it, including the source code, design,
-text, images, screenshots and resume, is the property of Syed Yaser Ahmed.
+Copyright (c) 2026 Syed Yaser Ahmed
 
-No license is granted. You may not copy, modify, merge, publish, distribute,
-sublicense or sell any part of this repository, or create derivative works
-from it, without prior written permission from the copyright holder.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Viewing the published site and the repository on GitHub is permitted, as is
-the forking that GitHub's Terms of Service allow for public repositories.
-Neither grants any further rights.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Fonts are loaded from Google Fonts under their own licenses and are not
-part of this repository.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-For permission requests, contact Syed Yaser Ahmed through
-https://www.linkedin.com/in/yasersyed.
+
+What this license covers
+------------------------
+The MIT license above applies to the code and design of this site: the HTML,
+CSS and JavaScript, the cutting-mat background, the cabinet, card and tape
+styles, the sticker artwork, and the app screenshots. Use them however you
+like.
+
+Personal details are excluded
+-----------------------------
+The following are NOT licensed and may not be reused, republished or
+presented as your own:
+
+- the name Syed Yaser Ahmed (Yaser Syed) and any likeness
+- Resume.pdf
+- work history, education and certifications
+- contact details and profile links
+- the first-person text describing the author, including the hero text and
+  the notes on each drawer
+- images/og.png, which shows the above
+
+If you reuse the site, replace all of this with your own content.
+
+Third-party logos
+-----------------
+The stickers in images/stickers/ show logos that are trademarks of their
+respective owners. They are used only to indicate tools the author works
+with and imply no endorsement; the MIT license grants no rights to these
+trademarks. The logo shapes come from Simple Icons (https://simpleicons.org,
+CC0 1.0). The Rust logo is (c) the Rust Foundation, licensed under
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). The C#
+sticker is plain text and uses no Microsoft artwork.
+
+Fonts are loaded from Google Fonts under their own licenses and are not part
+of this repository.

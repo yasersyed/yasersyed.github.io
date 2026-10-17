@@ -17,6 +17,8 @@ The site highlights **tools and side projects, not the day job**. Keep the job t
 | `js/site.js` | Drawer clicks (copies the matching `<template>` into the card) and the ruler numbers along the top |
 | `js/carousel.js` | Screenshot slideshow used on the bench (scroll-snap, arrows, dots, arrow keys) |
 | `images/apps/<project>/` | Screenshots, as WebP |
+| `images/stickers/` | Logo stickers stuck on the mat (SVG) |
+| `images/og.png` | Link-preview image (a 1200×630 capture of the top of the page) |
 | `Resume.pdf` | The resume behind the "Resume" link. Replace the file to update it |
 
 `preview.html` is a local, git-excluded copy used to publish previews. Ignore it.
@@ -55,6 +57,14 @@ Copy one `<article class="project">` block. Each project opens with a 16:10 pict
 
 Then add the tape name, one sentence, `.made` tapes for its stack, and the repo link. The grid has two columns, so keep an even count or accept one card alone in the last row.
 
+### Stickers
+
+Logo stickers sit on the mat in two groups: beside the hero, and beside the day job list. Each is an `<img class="sticker">` inside `.stickers-hero` or `.stickers-job`, placed with inline CSS variables: `--x` and `--y` are offsets from the group's top-right corner, `--r` is the tilt and `--s` the size. Below 1140px wide, each group becomes a small row instead.
+
+- Stickers must never cover text, links or the cabinet. After moving one, check at 1024, 1160, 1280 and 1440px wide by comparing each sticker's box against the text's client rects.
+- To make a new one, take the logo path from Simple Icons (CC0) and wrap it in the same 128×128 badge: a circle, hexagon or rounded square with a 7px white stroke, as in the existing SVGs.
+- Logos are trademarks; credit any logo with its own license in `LICENSE` (the Rust logo is CC BY-SA 4.0). C# has no free logo, so its sticker is plain text.
+
 ### Screenshots
 
 Use real screenshots only, never mocked output. Save them as WebP about 1280px wide (portrait phone shots about 780px wide), roughly quality 82. Python's Pillow works:
@@ -86,7 +96,7 @@ Before committing, render the page in Chromium. Playwright is available. Use `ex
 - **Reuse:** extend `site.css` tokens and the existing `.tape`, `.drawer`, `.project` and carousel pieces before adding new ones.
 - **One look:** the page deliberately has no light/dark switch, because it's one physical scene.
 - **Contact details:** don't put a phone number or email on the page. The resume PDF has them.
-- **License:** all rights reserved (see `LICENSE`). Don't add open-source code that requires its own license notice without checking with Yaser, and keep the footer's copyright line.
+- **License:** code and design are MIT; personal details (name, resume, work and education history, contact links, first-person text, `images/og.png`) are excluded. See `LICENSE`. Keep that split when adding content, credit any third-party asset that needs it, and keep the footer line.
 
 ## Open items
 
